@@ -7,33 +7,135 @@
  */
 
 #include "_kiss_fft_guts.h"
+#include <stdint.h>
+
+
+/* pack {imag[15:0], real[15:0]} */
+static inline uint32_t pack_cp(kiss_fft_cpx x) {
+  return ((uint32_t)(uint16_t)x.r) | ((uint32_t)(uint16_t)x.i << 16);
+}
+
+static inline kiss_fft_cpx unpack_cp(uint32_t p) {
+  kiss_fft_cpx r;
+r.r = (kiss_fft_scalar)(int16_t)(p & 0xFFFF);
+r.i = (kiss_fft_scalar)(int16_t)(p >> 16);
+return r;
+}
+
+/* CMUL: keep cus_cmul() from _kiss_fft_guts.h */
+static inline kiss_fft_cpx cus_cmul_cp(kiss_fft_cpx a, kiss_fft_cpx b) {
+  uint32_t ap = pack_cp(a);
+uint32_t bp = pack_cp(b);
+uint32_t rp = cus_cmul(ap, bp);
+return unpack_cp(rp);
+}
+
+/* CADD funct7=0x10 */
+static inline uint32_t cus_cadd_u32(uint32_t a, uint32_t b) {
+  uint32_t r;
+asm volatile (".insn r 0x7b, 0x1, 0x10, %0, %1, %2"
+                : "=r"(r) : "r"(a), "r"(b));
+return r;
+}
+
+/* CSUB funct7=0x14 */
+static inline uint32_t cus_csub_u32(uint32_t a, uint32_t b) {
+  uint32_t r;
+asm volatile (".insn r 0x7b, 0x1, 0x14, %0, %1, %2"
+                : "=r"(r) : "r"(a), "r"(b));
+return r;
+}
+
+static inline kiss_fft_cpx cus_cadd_cp(kiss_fft_cpx a, kiss_fft_cpx b) {
+  return unpack_cp(cus_cadd_u32(pack_cp(a), pack_cp(b)));
+}
+static inline kiss_fft_cpx cus_csub_cp(kiss_fft_cpx a, kiss_fft_cpx b) {
+  return unpack_cp(cus_csub_u32(pack_cp(a), pack_cp(b)));
+}
+
+/* SETTW funct7=0x28 (no writeback) */
+static inline void cus_settw_u32(uint32_t tw)
+{
+    asm volatile (".insn r 0x7b, 0x1, 0x28, x0, %0, x0"
+                :
+                : "r"(tw)
+                : "memory");
+}
+
+/* BFLY2 funct7=0x2C : rd <- y0 ; shadow_y1 <- y1 */
+static inline uint32_t cus_bfly2_u32(uint32_t x0, uint32_t x1) {
+  uint32_t r;
+asm volatile (".insn r 0x7b, 0x1, 0x2C, %0, %1, %2"
+                : "=r"(r) : "r"(x0), "r"(x1));
+return r;
+}
+
+/* GETY1 funct7=0x1C : rd <- shadow_y1 */
+static inline uint32_t cus_gety1_u32(void) {
+  uint32_t r;
+asm volatile (".insn r 0x7b, 0x1, 0x1C, %0, x0, x0"
+                : "=r"(r));
+return r;
+}
+
+/* --------------------------------------------------------------------------
+ * Override macros used by KISS FFT
+ * -------------------------------------------------------------------------- */
+#undef C_MUL
+#define C_MUL(m,a,b)   do { (m) = cus_cmul_cp((a),(b)); } while (0)
+
+#undef C_ADD
+#define C_ADD(r,a,b)   do { (r) = cus_cadd_cp((a),(b)); } while (0)
+
+#undef C_SUB
+#define C_SUB(r,a,b)   do { (r) = cus_csub_cp((a),(b)); } while (0)
+
+#undef C_ADDTO
+#define C_ADDTO(a,b)   do { (a) = cus_cadd_cp((a),(b)); } while (0)
+
+
+
 /* The guts header contains all the multiplication and addition macros that are defined for
  fixed or floating point complex numbers.  It also delares the kf_ internal functions.
  */
 
+
 static void kf_bfly2(
-        kiss_fft_cpx * Fout,
+        kiss_fft_cpx* Fout,
         const size_t fstride,
         const kiss_fft_cfg st,
         int m
         )
 {
-    kiss_fft_cpx * Fout2;
-    kiss_fft_cpx * tw1 = st->twiddles;
-    kiss_fft_cpx t;
-    Fout2 = Fout + m;
-    do{
-        C_FIXDIV(*Fout,2); C_FIXDIV(*Fout2,2);
+    kiss_fft_cpx* Fout2 = Fout + m;
+    kiss_fft_cpx* tw1 = st->twiddles;
 
-        C_MUL (t,  *Fout2 , *tw1);
-        tw1 += fstride;
-        C_SUB( *Fout2 ,  *Fout , t );
-        C_ADDTO( *Fout ,  t );
-        ++Fout2;
+    do
+    {
+        C_FIXDIV(*Fout, 2);
+        C_FIXDIV(*Fout2, 2);
+
+        /* twiddle for this lane */
+        kiss_fft_cpx tw = *tw1;
+        cus_settw_u32(pack_cp(tw));
+        
+        //uint32_t twp = pack_cp(*tw1);
+        //cus_settw(twp);
+
+        //uint32_t x0p = pack_cp(*Fout);
+        //uint32_t x1p = pack_cp(*Fout2);
+
+        uint32_t y0p = cus_bfly2_u32(pack_cp(*Fout),  pack_cp(*Fout2));
+        uint32_t y1p = cus_gety1_u32();
+
+        *Fout = unpack_cp(y0p);
+        *Fout2 = unpack_cp(y1p);
+
         ++Fout;
-    }while (--m);
+        ++Fout2;
+        tw1 += fstride;
+    } while (--m);
 }
-
 static void kf_bfly4(
         kiss_fft_cpx * Fout,
         const size_t fstride,
@@ -231,72 +333,104 @@ static void kf_bfly_generic(
     KISS_FFT_TMP_FREE(scratch);
 }
 
-static
-void kf_work(
-        kiss_fft_cpx * Fout,
-        const kiss_fft_cpx * f,
-        const size_t fstride,
-        int in_stride,
-        int * factors,
-        const kiss_fft_cfg st
-        )
+typedef struct {
+    kiss_fft_cpx *Fout;
+    const kiss_fft_cpx *f;
+    size_t fstride;
+    int in_stride;
+    int *factors;
+
+    int p;
+    int m;
+
+    int stage;   // 0 = descend, 1 = recombine
+    int idx;     // sous-FFT courante
+} kf_frame_t;
+
+static void kf_work_iterative(
+    kiss_fft_cpx *Fout,
+    const kiss_fft_cpx *f,
+    size_t fstride,
+    int in_stride,
+    int *factors,
+    const kiss_fft_cfg st
+)
 {
-    kiss_fft_cpx * Fout_beg=Fout;
-    const int p=*factors++; /* the radix  */
-    const int m=*factors++; /* stage's fft length/p */
-    const kiss_fft_cpx * Fout_end = Fout + p*m;
+    // Safe pour FFT jusqu’à 4096 (radix mixte)
+    kf_frame_t stack[32];
+    int sp = 0;
 
-#ifdef _OPENMP
-    // use openmp extensions at the
-    // top-level (not recursive)
-    if (fstride==1 && p<=5 && m!=1)
-    {
-        int k;
+    // push frame racine
+    stack[sp++] = (kf_frame_t){
+        .Fout = Fout,
+        .f = f,
+        .fstride = fstride,
+        .in_stride = in_stride,
+        .factors = factors,
+        .p = factors[0],
+        .m = factors[1],
+        .stage = 0,
+        .idx = 0
+    };
 
-        // execute the p different work units in different threads
-#       pragma omp parallel for
-        for (k=0;k<p;++k)
-            kf_work( Fout +k*m, f+ fstride*in_stride*k,fstride*p,in_stride,factors,st);
-        // all threads have joined by this point
+    while (sp > 0) {
+        kf_frame_t *fr = &stack[sp - 1];
 
-        switch (p) {
-            case 2: kf_bfly2(Fout,fstride,st,m); break;
-            case 3: kf_bfly3(Fout,fstride,st,m); break;
-            case 4: kf_bfly4(Fout,fstride,st,m); break;
-            case 5: kf_bfly5(Fout,fstride,st,m); break;
-            default: kf_bfly_generic(Fout,fstride,st,m,p); break;
+        if (fr->stage == 0) {
+
+            // Cas terminal : m == 1
+            if (fr->m == 1) {
+                kiss_fft_cpx *Fo = fr->Fout;
+                const kiss_fft_cpx *fi = fr->f;
+                const kiss_fft_cpx *Fo_end = Fo + fr->p;
+
+                do {
+                    *Fo = *fi;
+                    fi += fr->fstride * fr->in_stride;
+                } while (++Fo != Fo_end);
+
+                fr->stage = 1;
+                continue;
+            }
+
+            // Descente dans les sous-FFT
+            if (fr->idx < fr->p) {
+                int k = fr->idx++;
+		if (sp >= 32) {
+		    KISS_FFT_ERROR("kf_work_iterative stack overflow");
+		    return;
+		}
+                stack[sp++] = (kf_frame_t){
+                    .Fout = fr->Fout + k * fr->m,
+                    .f = fr->f + k * fr->fstride * fr->in_stride,
+                    .fstride = fr->fstride * fr->p,
+                    .in_stride = fr->in_stride,
+                    .factors = fr->factors + 2,
+                    .p = fr->factors[2],
+                    .m = fr->factors[3],
+                    .stage = 0,
+                    .idx = 0
+                };
+                continue;
+            }
+
+            fr->stage = 1;
         }
-        return;
-    }
-#endif
 
-    if (m==1) {
-        do{
-            *Fout = *f;
-            f += fstride*in_stride;
-        }while(++Fout != Fout_end );
-    }else{
-        do{
-            // recursive call:
-            // DFT of size m*p performed by doing
-            // p instances of smaller DFTs of size m,
-            // each one takes a decimated version of the input
-            kf_work( Fout , f, fstride*p, in_stride, factors,st);
-            f += fstride*in_stride;
-        }while( (Fout += m) != Fout_end );
-    }
+        switch (fr->p) {
+            case 2: kf_bfly2(fr->Fout, fr->fstride, st, fr->m); break;
+            case 3: kf_bfly3(fr->Fout, fr->fstride, st, fr->m); break;
+            case 4: kf_bfly4(fr->Fout, fr->fstride, st, fr->m); break;
+            case 5: kf_bfly5(fr->Fout, fr->fstride, st, fr->m); break;
+            default:
+                kf_bfly_generic(fr->Fout, fr->fstride, st, fr->m, fr->p);
+                break;
+        }
 
-    Fout=Fout_beg;
-
-    // recombine the p smaller DFTs
-    switch (p) {
-        case 2: kf_bfly2(Fout,fstride,st,m); break;
-        case 3: kf_bfly3(Fout,fstride,st,m); break;
-        case 4: kf_bfly4(Fout,fstride,st,m); break;
-        case 5: kf_bfly5(Fout,fstride,st,m); break;
-        default: kf_bfly_generic(Fout,fstride,st,m,p); break;
+        sp--;
     }
 }
+
 
 /*  facbuf is populated by p1,m1,p2,m2, ...
     where
@@ -392,11 +526,14 @@ void kiss_fft_stride(kiss_fft_cfg st,const kiss_fft_cpx *fin,kiss_fft_cpx *fout,
         return;
         }
 
-        kf_work(tmpbuf,fin,1,in_stride, st->factors,st);
+        //kf_work(tmpbuf,fin,1,in_stride, st->factors,st);
+        kf_work_iterative(tmpbuf,fin,1,in_stride, st->factors,st);
         memcpy(fout,tmpbuf,sizeof(kiss_fft_cpx)*st->nfft);
         KISS_FFT_TMP_FREE(tmpbuf);
     }else{
-        kf_work( fout, fin, 1,in_stride, st->factors,st );
+        //kf_work( fout, fin, 1,in_stride, st->factors,st );
+        kf_work_iterative(fout,fin,1,in_stride, st->factors,st);
+
     }
 }
 

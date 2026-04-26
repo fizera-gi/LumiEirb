@@ -36,6 +36,19 @@ struct kiss_fft_state{
 //     kiss_fft_cpx twiddles[1];
 };
 
+//Custom instuctions INLINE
+
+static inline uint32_t cus_cmul(uint32_t a, uint32_t b) 
+{
+    uint32_t rd;
+    asm volatile (
+        ".insn r 0x7b, 0x1, 0x0C, %0, %1, %2"
+        : "=r"(rd)
+        : "r"(a), "r"(b)
+    );
+    return rd;
+}
+
 /*
   Explanation of macros dealing with complex math:
 
