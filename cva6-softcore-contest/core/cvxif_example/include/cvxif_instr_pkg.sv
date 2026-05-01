@@ -24,7 +24,7 @@ package cvxif_instr_pkg;
     NMADD_RS3_R4 = 4'b1000,
     NMSUB_RS3_R4 = 4'b1001,
     //ADD_RS3_R = 4'b1111
-    //ADD5_RS1 = 4'b1010,        // ADD 5
+    //ADD5_RS1 = 4'b1010,        // ADD 5 for first test
     CMUL_I16 = 4'b1011,        // 16BITS COMPLEX MULT
     CADD_I16   = 4'b1100,      // 16BITS COMPLEX ADD
     CSUB_I16  = 4'b1101,    

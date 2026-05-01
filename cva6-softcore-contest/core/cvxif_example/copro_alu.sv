@@ -39,10 +39,7 @@ module copro_alu
   logic [4:0] rd_n, rd_q;
   logic we_n, we_q;
 
-  // --------------------------------------------------------------------------
-  // Complex helpers (Q15 packed as {imag[15:0], real[15:0]})
-  // --------------------------------------------------------------------------
-    // Complex helpers
+
   logic signed [15:0] ar, ai, br, bi;
   logic signed [15:0] xr, xi, wr, wi;
 
@@ -69,9 +66,7 @@ module copro_alu
   assign we_o     = we_q;
 
   always_comb begin
-    // ----------------------------
-    // Safe defaults (avoid latches)
-    // ----------------------------
+   
 
     result_n = '0;
     hartid_n = hartid_i;
@@ -80,7 +75,7 @@ module copro_alu
     rd_n     = rd_i;
     we_n     = 1'b0;
 
-    // Default complex temps
+
     xr = '0; xi = '0; wr = '0; wi = '0;
     p1 = '0; p2 = '0; p3 = '0; p4 = '0;
     real_q30 = '0; imag_q30 = '0;
@@ -122,17 +117,9 @@ module copro_alu
         rd_n     = rd_i;
         we_n     = 1'b1;
       end
-      /*cvxif_instr_pkg::ADD_MULTI: begin
-        result_n = registers_i[1] + registers_i[0];
-        hartid_n = hartid_i;
-        id_n     = id_i;
-        valid_n  = 1'b1;
-        rd_n     = rd_i;
-        we_n     = 1'b1;
-      end*/
       
       cvxif_instr_pkg::SETTW_I16: begin
-	  shadow_tw_n = registers_i[0];   // rs1 (selon ton mapping registers_i[0]=rs1)
+	  shadow_tw_n = registers_i[0];   
 	  valid_n = 1'b1;
 	  we_n    = 1'b0;                 // pas de writeback
 	end
@@ -170,21 +157,18 @@ module copro_alu
         we_n = 1'b1;
       end
    
-      /*cvxif_instr_pkg::ADD5_RS1: begin
-        result_n = registers_i[0] + 32'd5;  // Add 5 to rs1
-        hartid_n = hartid_i;
-        id_n     = id_i;
-        valid_n  = 1'b1;
-        rd_n     = rd_i;
-        we_n     = 1'b1;
-      end
-      */
-      // ------------------------------------------------------------
-      // CMUL_I16: Q15 complex multiply, packed {imag, real}
-      // A = (xr + j*xi), B = (wr + j*wi)
-      // R = (xr*wr - xi*wi) + j(xr*wi + xi*wr)
-      // Inputs are Q15, intermediate Q30, output back to Q15 by >>> 15
-      // ------------------------------------------------------------
+      // ----------------------------------------------------------------------
+      // CMUL_I16
+      //
+      // Custom Q15 complex multiplication:
+      //   R = A * B
+      //   real = ar*br - ai*bi
+      //   imag = ar*bi + ai*br
+      //
+      // The rounding step is intentionally identical to the software KISS FFT
+      // macro so that the optimized implementation remains bit-exact.
+      // ----------------------------------------------------------------------
+      
       cvxif_instr_pkg::CMUL_I16: begin
 	  // rs1
 	  ar = registers_i[1][15:0];
@@ -207,6 +191,18 @@ module copro_alu
 	  rd_n     = rd_i;
 	  we_n     = 1'b1;
 	end
+	
+	
+      //----------------------------------------------------------------------
+      // CADD_I16
+      //
+      // Packed Q15 complex addition:
+      //   result.real = rs1.real + rs2.real
+      //   result.imag = rs1.imag + rs2.imag
+      //
+      // This instruction replaces the KISS FFT C_ADD/C_ADDTO macros.
+      // ----------------------------------------------------------------------
+      
 	      cvxif_instr_pkg::CADD_I16: begin
 	  // Unpack: {imag, real}
 	  xr = registers_i[0][15:0];     // real
@@ -225,7 +221,17 @@ module copro_alu
 	  rd_n     = rd_i;
 	  we_n     = 1'b1;
 	end
-
+	
+      //----------------------------------------------------------------------
+      // CSUB_I16
+      //
+      // Packed Q15 complex subtraction:
+      //   result.real = rs1.real - rs2.real
+      //   result.imag = rs1.imag - rs2.imag
+      //
+      // This instruction replaces the KISS FFT C_SUB macro.
+      // ----------------------------------------------------------------------
+      
 	cvxif_instr_pkg::CSUB_I16: begin
 	  // Unpack: {imag, real}
 	  xr = registers_i[0][15:0];     // real
@@ -244,6 +250,21 @@ module copro_alu
 	  rd_n     = rd_i;
 	  we_n     = 1'b1;
 	end
+	
+      //----------------------------------------------------------------------
+      // BFLY2_I16
+      //
+      // Fused radix-2 butterfly for one FFT lane.
+      //
+      // Software equivalent:
+      //   t  = x1 * twiddle
+      //   y0 = x0 + t
+      //   y1 = x0 - t
+      //
+      // The twiddle is read from shadow_tw_q, previously written by SETTW_I16.
+      // y0 is returned through the architectural destination register, while
+      // y1 is stored in shadow_y1_q and later read by GETY1_I16.
+      // ----------------------------------------------------------------------
 
 	cvxif_instr_pkg::BFLY2_I16: begin
 	  // unpack x0 (rs1)
@@ -284,6 +305,15 @@ module copro_alu
 	  we_n    = 1'b1;
 	  rd_n = rd_i;
 	end
+	
+      // ----------------------------------------------------------------------
+      // GETY1_I16
+      //
+      // Read the second output produced by the previous fused butterfly.
+      // This avoids writing two architectural registers from one instruction
+      // while keeping the control flow explicitly driven by software.
+      // ----------------------------------------------------------------------
+      
 	cvxif_instr_pkg::GETY1_I16: begin
 	  result_n = shadow_y1_q;
 

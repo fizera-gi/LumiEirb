@@ -19663,7 +19663,7 @@ Disassembly of section .rodata:
 80011c8c:	7373696b          	.4byte	0x7373696b
 80011c90:	665f 7466 632e      	.byte	0x5f, 0x66, 0x66, 0x74, 0x2e, 0x63
 80011c96:	353a                	.2byte	0x353a
-80011c98:	3938                	.2byte	0x3938
+80011c98:	3135                	.2byte	0x3135
 80011c9a:	0020                	.2byte	0x20
 80011c9c:	6f66                	.2byte	0x6f66
 80011c9e:	7475                	.2byte	0x7475
@@ -19680,7 +19680,7 @@ Disassembly of section .rodata:
 80011cb8:	7373696b          	.4byte	0x7373696b
 80011cbc:	665f 7466 632e      	.byte	0x5f, 0x66, 0x66, 0x74, 0x2e, 0x63
 80011cc2:	353a                	.2byte	0x353a
-80011cc4:	3539                	.2byte	0x3539
+80011cc4:	3735                	.2byte	0x3735
 80011cc6:	0020                	.2byte	0x20
 80011cc8:	654d                	.2byte	0x654d
 80011cca:	6f6d                	.2byte	0x6f6d
