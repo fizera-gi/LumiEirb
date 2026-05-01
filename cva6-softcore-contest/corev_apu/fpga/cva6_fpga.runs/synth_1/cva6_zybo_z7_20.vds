@@ -3,16 +3,15 @@
 # SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Fri May  1 13:47:31 2026
-# Process ID: 185469
+# Start of session at: Fri May  1 18:05:31 2026
+# Process ID: 664142
 # Current directory: /home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/cva6_fpga.runs/synth_1
 # Command line: vivado -log cva6_zybo_z7_20.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cva6_zybo_z7_20.tcl
 # Log file: /home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/cva6_fpga.runs/synth_1/cva6_zybo_z7_20.vds
 # Journal file: /home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/cva6_fpga.runs/synth_1/vivado.jou
-# Running On: kador, OS: Linux, CPU Frequency: 1073.224 MHz, CPU Physical cores: 14, Host memory: 33322 MB
+# Running On: kador, OS: Linux, CPU Frequency: 1196.442 MHz, CPU Physical cores: 14, Host memory: 33322 MB
 #-----------------------------------------------------------
 source cva6_zybo_z7_20.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1367.180 ; gain = 138.836 ; free physical = 25787 ; free virtual = 27246
 Command: synth_design -top cva6_zybo_z7_20 -part xc7z020clg400-1 -global_retiming on
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
@@ -20,9 +19,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 185568
+INFO: [Synth 8-7075] Helper process launched with PID 664244
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2143.230 ; gain = 404.648 ; free physical = 24652 ; free virtual = 26199
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2143.203 ; gain = 404.617 ; free physical = 23849 ; free virtual = 25520
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-9535] ignoring re-definition of command line macro 'BRAM' [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/src/zybo-z7-20.svh:18]
 WARNING: [Synth 8-11067] parameter 'NbInstr' declared inside package 'cvxif_instr_pkg' shall be treated as localparam [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cvxif_example/include/cvxif_instr_pkg.sv:62]
@@ -103,8 +102,8 @@ INFO: [Synth 8-6157] synthesizing module 'AXI_BUS' [/home/pr_se_2324/LumiEirb_ne
 	Parameter AXI_ID_WIDTH bound to: 5 - type: integer 
 	Parameter AXI_USER_WIDTH bound to: 32 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'AXI_BUS' (0#1) [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/tb/axi_intf.sv:19]
-INFO: [Synth 8-6157] synthesizing module 'xlnx_axi_dwidth_converter_dm_slave' [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/cva6_fpga.runs/synth_1/.Xil/Vivado-185469-kador/realtime/xlnx_axi_dwidth_converter_dm_slave_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'xlnx_axi_dwidth_converter_dm_slave' (0#1) [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/cva6_fpga.runs/synth_1/.Xil/Vivado-185469-kador/realtime/xlnx_axi_dwidth_converter_dm_slave_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'xlnx_axi_dwidth_converter_dm_slave' [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/cva6_fpga.runs/synth_1/.Xil/Vivado-664142-kador/realtime/xlnx_axi_dwidth_converter_dm_slave_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'xlnx_axi_dwidth_converter_dm_slave' (0#1) [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/cva6_fpga.runs/synth_1/.Xil/Vivado-664142-kador/realtime/xlnx_axi_dwidth_converter_dm_slave_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'AXI_BUS' [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/tb/axi_intf.sv:19]
 	Parameter AXI_ADDR_WIDTH bound to: 64 - type: integer 
 	Parameter AXI_DATA_WIDTH bound to: 64 - type: integer 
@@ -117,8 +116,8 @@ INFO: [Synth 8-6157] synthesizing module 'AXI_BUS' [/home/pr_se_2324/LumiEirb_ne
 	Parameter AXI_ID_WIDTH bound to: 4 - type: integer 
 	Parameter AXI_USER_WIDTH bound to: 32 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'AXI_BUS' (0#1) [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/tb/axi_intf.sv:19]
-INFO: [Synth 8-6157] synthesizing module 'xlnx_axi_dwidth_converter_dm_master' [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/cva6_fpga.runs/synth_1/.Xil/Vivado-185469-kador/realtime/xlnx_axi_dwidth_converter_dm_master_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'xlnx_axi_dwidth_converter_dm_master' (0#1) [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/cva6_fpga.runs/synth_1/.Xil/Vivado-185469-kador/realtime/xlnx_axi_dwidth_converter_dm_master_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'xlnx_axi_dwidth_converter_dm_master' [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/cva6_fpga.runs/synth_1/.Xil/Vivado-664142-kador/realtime/xlnx_axi_dwidth_converter_dm_master_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'xlnx_axi_dwidth_converter_dm_master' (0#1) [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/cva6_fpga.runs/synth_1/.Xil/Vivado-664142-kador/realtime/xlnx_axi_dwidth_converter_dm_master_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'bootrom_32' [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/src/bootrom/bootrom_32.sv:17]
 INFO: [Synth 8-6155] done synthesizing module 'bootrom_32' (0#1) [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/src/bootrom/bootrom_32.sv:17]
 INFO: [Synth 8-6157] synthesizing module 'rstgen' [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/vendor/pulp-platform/common_cells/src/rstgen.sv:13]
@@ -1150,8 +1149,8 @@ INFO: [Synth 8-6157] synthesizing module 'compressed_instr_decoder' [/home/pr_se
 	Parameter CoproInstr bound to: 130'b1110000000000000111100000000001110000000000000000000000000111101111110000000000001111000000000011100000000000000000001000001111011 
 INFO: [Synth 8-6155] done synthesizing module 'compressed_instr_decoder' (0#1) [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cvxif_example/compressed_instr_decoder.sv:10]
 INFO: [Synth 8-6157] synthesizing module 'instr_decoder' [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cvxif_example/instr_decoder.sv:10]
-	Parameter NbInstr bound to: 32'sb00000000000000000000000000001111 
-	Parameter CoproInstr bound to: 1095'b000000000000000000000000011110111111111000000000011100000111111110000000100000000000000000001000001111011111111100000000001110000011111111101100100000001000000000000100000111101111111110000000000111000001111111110010011000001000000000000010000011110111111111000000000011100000111111111010010000000000000000000000000001000011000001100000000001110000011111111111101100000000000000000000000000100011100000110000000000111000001111111111110111000000000000000000000000010010110000011000000000011100000111111111111100100000000000000000000000001001111000001100000000001110000011111111111110000001000000000000000100000111101111111110000000000111000001111111110011010000110000000000000010000011110111111111000000000011100000111111111011101100100000000000000001000001111011111111100000000001110000011111111101111000010100000000000000100000111101111111110000000000111000001111111110111101010100000000000000010000011110111111111000000000011100000111111110001010101011000000000000001000001111011111111100000000001110000011111111101111100011100000000000000100000111101111111110000000000111000001111111110001111 
+	Parameter NbInstr bound to: 32'sb00000000000000000000000000001110 
+	Parameter CoproInstr bound to: 1022'b00000000000000000000000001111011111111100000000001110000011111111000000010000000000000000000100000111101111111110000000000111000001111111110110010000000100000000000010000011110111111111000000000011100000111111111001001100000100000000000001000001111011111111100000000001110000011111111101001000000000000000000000000000100001100000110000000000111000001111111111110110000000000000000000000000010001110000011000000000011100000111111111111011100000000000000000000000001001011000001100000000001110000011111111111110010000000000000000000000000100111100000110000000000111000001111111111111000000110000000000000010000011110111111111000000000011100000111111111011101100100000000000000001000001111011111111100000000001110000011111111101111000010100000000000000100000111101111111110000000000111000001111111110111101010100000000000000010000011110111111111000000000011100000111111110001010101011000000000000001000001111011111111100000000001110000011111111101111100011100000000000000100000111101111111110000000000111000001111111110001111 
 	Parameter NrRgprPorts bound to: 32'b00000000000000000000000000000010 
 INFO: [Synth 8-6155] done synthesizing module 'instr_decoder' (0#1) [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cvxif_example/instr_decoder.sv:10]
 INFO: [Synth 8-6157] synthesizing module 'copro_alu' [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cvxif_example/copro_alu.sv:10]
@@ -17441,18 +17440,18 @@ WARNING: [Synth 8-7129] Port gpio\.r_data[58] in module ariane_peripherals is ei
 WARNING: [Synth 8-7129] Port gpio\.r_data[57] in module ariane_peripherals is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2650.160 ; gain = 911.578 ; free physical = 24116 ; free virtual = 25685
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2649.133 ; gain = 910.547 ; free physical = 23227 ; free virtual = 24919
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2653.129 ; gain = 914.547 ; free physical = 24116 ; free virtual = 25685
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2652.102 ; gain = 913.516 ; free physical = 23227 ; free virtual = 24920
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2653.129 ; gain = 914.547 ; free physical = 24116 ; free virtual = 25685
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2652.102 ; gain = 913.516 ; free physical = 23227 ; free virtual = 24920
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.66 ; elapsed = 00:00:00.67 . Memory (MB): peak = 2653.129 ; gain = 0.000 ; free physical = 24124 ; free virtual = 25686
+Netlist sorting complete. Time (s): cpu = 00:00:00.61 ; elapsed = 00:00:00.62 . Memory (MB): peak = 2652.102 ; gain = 0.000 ; free physical = 23218 ; free virtual = 24918
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -17486,22 +17485,22 @@ Parsing XDC File [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/
 Finished Parsing XDC File [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/cva6_fpga.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2864.543 ; gain = 0.000 ; free physical = 23991 ; free virtual = 25571
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2864.516 ; gain = 0.000 ; free physical = 23068 ; free virtual = 24827
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2864.578 ; gain = 0.000 ; free physical = 23991 ; free virtual = 25571
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2864.551 ; gain = 0.000 ; free physical = 23068 ; free virtual = 24826
 WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'i_axi_dwidth_converter_dm_master' at clock pin 's_axi_aclk' is different from the actual clock period '25.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'i_axi_dwidth_converter_dm_slave' at clock pin 's_axi_aclk' is different from the actual clock period '25.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 23920 ; free virtual = 25507
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 2877.391 ; gain = 1138.805 ; free physical = 23045 ; free virtual = 24808
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 23919 ; free virtual = 25507
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 2877.391 ; gain = 1138.805 ; free physical = 23045 ; free virtual = 24808
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -17513,7 +17512,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for i_xlnx_clk_gen. (constraint file 
 Applied set_property KEEP_HIERARCHY = SOFT for i_axi_dwidth_converter_dm_master. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for i_axi_dwidth_converter_dm_slave. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 23919 ; free virtual = 25506
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 2877.391 ; gain = 1138.805 ; free physical = 23045 ; free virtual = 24808
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'r_state_q_reg' in module 'axi_atop_filter'
 INFO: [Synth 8-802] inferred FSM for state register 'w_state_q_reg' in module 'axi_atop_filter'
@@ -17843,7 +17842,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'w_state_q_reg' using encod
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'r_state_q_reg' using encoding 'sequential' in module 'axi_riscv_lrsc'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:32 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 19944 ; free virtual = 21550
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:32 . Memory (MB): peak = 2877.391 ; gain = 1138.805 ; free physical = 19067 ; free virtual = 20840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -17855,7 +17854,7 @@ Detailed RTL Component Info :
 	   2 Input   64 Bit       Adders := 21    
 	   3 Input   64 Bit       Adders := 1     
 	   2 Input   33 Bit       Adders := 1     
-	   2 Input   32 Bit       Adders := 30    
+	   2 Input   32 Bit       Adders := 29    
 	   3 Input   32 Bit       Adders := 3     
 	   3 Input   30 Bit       Adders := 4     
 	   2 Input   30 Bit       Adders := 9     
@@ -17968,8 +17967,8 @@ Detailed RTL Component Info :
 	   4 Input   32 Bit        Muxes := 26    
 	   3 Input   32 Bit        Muxes := 11    
 	   7 Input   32 Bit        Muxes := 6     
-	  15 Input   32 Bit        Muxes := 2     
-	  16 Input   32 Bit        Muxes := 3     
+	  14 Input   32 Bit        Muxes := 2     
+	  15 Input   32 Bit        Muxes := 3     
 	  11 Input   32 Bit        Muxes := 2     
 	   6 Input   32 Bit        Muxes := 3     
 	   5 Input   32 Bit        Muxes := 6     
@@ -18014,7 +18013,7 @@ Detailed RTL Component Info :
 	   8 Input    6 Bit        Muxes := 2     
 	   6 Input    6 Bit        Muxes := 1     
 	   2 Input    5 Bit        Muxes := 286   
-	  16 Input    5 Bit        Muxes := 2     
+	  15 Input    5 Bit        Muxes := 2     
 	   3 Input    5 Bit        Muxes := 7     
 	   8 Input    5 Bit        Muxes := 19    
 	   9 Input    5 Bit        Muxes := 18    
@@ -18047,8 +18046,8 @@ Detailed RTL Component Info :
 	   3 Input    2 Bit        Muxes := 42    
 	   4 Input    2 Bit        Muxes := 23    
 	   7 Input    2 Bit        Muxes := 9     
-	  14 Input    2 Bit        Muxes := 1     
-	  16 Input    2 Bit        Muxes := 2     
+	  13 Input    2 Bit        Muxes := 1     
+	  15 Input    2 Bit        Muxes := 2     
 	  11 Input    2 Bit        Muxes := 1     
 	   5 Input    2 Bit        Muxes := 3     
 	  19 Input    2 Bit        Muxes := 3     
@@ -18056,22 +18055,21 @@ Detailed RTL Component Info :
 	   6 Input    2 Bit        Muxes := 2     
 	  40 Input    2 Bit        Muxes := 3     
 	  41 Input    2 Bit        Muxes := 3     
-	  10 Input    1 Bit        Muxes := 17    
+	  10 Input    1 Bit        Muxes := 18    
 	   2 Input    1 Bit        Muxes := 2753  
 	   6 Input    1 Bit        Muxes := 300   
 	   3 Input    1 Bit        Muxes := 83    
 	   7 Input    1 Bit        Muxes := 48    
-	  16 Input    1 Bit        Muxes := 5     
-	  15 Input    1 Bit        Muxes := 1     
-	  11 Input    1 Bit        Muxes := 34    
+	  15 Input    1 Bit        Muxes := 5     
+	  14 Input    1 Bit        Muxes := 3     
 	   4 Input    1 Bit        Muxes := 158   
 	   5 Input    1 Bit        Muxes := 52    
+	  11 Input    1 Bit        Muxes := 33    
 	  12 Input    1 Bit        Muxes := 52    
 	   9 Input    1 Bit        Muxes := 20    
 	   8 Input    1 Bit        Muxes := 5     
 	  20 Input    1 Bit        Muxes := 1     
 	  19 Input    1 Bit        Muxes := 6     
-	  14 Input    1 Bit        Muxes := 2     
 	  76 Input    1 Bit        Muxes := 19    
 	  88 Input    1 Bit        Muxes := 1     
 	  13 Input    1 Bit        Muxes := 1     
@@ -18587,7 +18585,7 @@ INFO: [Synth 8-5544] ROM "axi_fsm.result" won't be mapped to Block RAM because a
 INFO: [Synth 8-5544] ROM "axi_fsm.result" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:13 ; elapsed = 00:01:19 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 17773 ; free virtual = 19487
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:13 ; elapsed = 00:01:19 . Memory (MB): peak = 2877.391 ; gain = 1138.805 ; free physical = 16941 ; free virtual = 18811
 ---------------------------------------------------------------------------------
  Sort Area is ex_stage i_multiplier/mult_result_d_0 : 0 0 : 2701 5011 : Used 1 time 0
  Sort Area is ex_stage i_multiplier/mult_result_d_0 : 0 1 : 2310 5011 : Used 1 time 0
@@ -18681,7 +18679,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:18 ; elapsed = 00:01:24 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 17707 ; free virtual = 19492
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:17 ; elapsed = 00:01:23 . Memory (MB): peak = 2877.391 ; gain = 1138.805 ; free physical = 16876 ; free virtual = 18819
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
@@ -18699,7 +18697,7 @@ WARNING: [Synth 8-3332] Sequential element (FSM_sequential_state_q_reg[2]) is un
 WARNING: [Synth 8-3332] Sequential element (FSM_sequential_state_q_reg[1]) is unused and will be removed from module hwpf_stride.
 WARNING: [Synth 8-3332] Sequential element (FSM_sequential_state_q_reg[0]) is unused and will be removed from module hwpf_stride.
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:45 ; elapsed = 00:01:51 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 17701 ; free virtual = 19487
+Finished Timing Optimization : Time (s): cpu = 00:01:42 ; elapsed = 00:01:49 . Memory (MB): peak = 2877.391 ; gain = 1138.805 ; free physical = 16850 ; free virtual = 18791
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -19837,7 +19835,7 @@ INFO: [Synth 8-5816] Retiming module `cva6_zybo_z7_20' done
 INFO: [Synth 8-7052] The timing for the instance i_1/i_bootrom/addr_q_reg_rep_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance i_1/i_bootrom/addr_q_reg_rep_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:53 ; elapsed = 00:02:05 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 16816 ; free virtual = 18610
+Finished Technology Mapping : Time (s): cpu = 00:01:51 ; elapsed = 00:02:03 . Memory (MB): peak = 2877.391 ; gain = 1138.805 ; free physical = 15944 ; free virtual = 17893
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -19879,37 +19877,37 @@ INFO: [Synth 8-4649] Removing BlackBox instance \i_ariane/i_cva6/i_frontend/i_in
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:58 ; elapsed = 00:02:09 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 16732 ; free virtual = 18601
+Finished IO Insertion : Time (s): cpu = 00:01:55 ; elapsed = 00:02:07 . Memory (MB): peak = 2877.391 ; gain = 1138.805 ; free physical = 15891 ; free virtual = 17908
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:58 ; elapsed = 00:02:09 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 16732 ; free virtual = 18601
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:55 ; elapsed = 00:02:07 . Memory (MB): peak = 2877.391 ; gain = 1138.805 ; free physical = 15891 ; free virtual = 17908
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:00 ; elapsed = 00:02:12 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 16734 ; free virtual = 18595
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:58 ; elapsed = 00:02:10 . Memory (MB): peak = 2877.391 ; gain = 1138.805 ; free physical = 15889 ; free virtual = 17913
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:01 ; elapsed = 00:02:12 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 16734 ; free virtual = 18596
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:58 ; elapsed = 00:02:10 . Memory (MB): peak = 2877.391 ; gain = 1138.805 ; free physical = 15889 ; free virtual = 17913
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:01 ; elapsed = 00:02:12 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 16734 ; free virtual = 18596
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:58 ; elapsed = 00:02:10 . Memory (MB): peak = 2877.391 ; gain = 1138.805 ; free physical = 15896 ; free virtual = 17913
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:01 ; elapsed = 00:02:12 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 16734 ; free virtual = 18596
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:58 ; elapsed = 00:02:10 . Memory (MB): peak = 2877.391 ; gain = 1138.805 ; free physical = 15896 ; free virtual = 17913
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -19972,14 +19970,14 @@ Report Cell Usage:
 |3     |xlnx_blk_mem_gen                    |     1|
 |4     |xlnx_clk_gen                        |     1|
 |5     |BUFG                                |     1|
-|6     |CARRY4                              |  1332|
+|6     |CARRY4                              |  1324|
 |7     |DSP48E1                             |    14|
 |11    |LUT1                                |   264|
-|12    |LUT2                                |  3340|
-|13    |LUT3                                |  3858|
-|14    |LUT4                                |  3507|
-|15    |LUT5                                |  4751|
-|16    |LUT6                                |  9110|
+|12    |LUT2                                |  3202|
+|13    |LUT3                                |  4019|
+|14    |LUT4                                |  3387|
+|15    |LUT5                                |  4774|
+|16    |LUT6                                |  9089|
 |17    |MUXF7                               |   384|
 |18    |MUXF8                               |    18|
 |19    |RAM16X1D                            |     4|
@@ -19996,18 +19994,18 @@ Report Cell Usage:
 |33    |OBUF                                |     2|
 +------+------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:01 ; elapsed = 00:02:13 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 16734 ; free virtual = 18596
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:58 ; elapsed = 00:02:10 . Memory (MB): peak = 2877.391 ; gain = 1138.805 ; free physical = 15896 ; free virtual = 17913
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 705 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:55 ; elapsed = 00:02:07 . Memory (MB): peak = 2876.418 ; gain = 914.547 ; free physical = 23926 ; free virtual = 25796
-Synthesis Optimization Complete : Time (s): cpu = 00:02:03 ; elapsed = 00:02:13 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 23941 ; free virtual = 25795
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:52 ; elapsed = 00:02:07 . Memory (MB): peak = 2877.391 ; gain = 913.516 ; free physical = 23018 ; free virtual = 25043
+Synthesis Optimization Complete : Time (s): cpu = 00:02:00 ; elapsed = 00:02:13 . Memory (MB): peak = 2877.391 ; gain = 1138.805 ; free physical = 23041 ; free virtual = 25050
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.32 ; elapsed = 00:00:00.32 . Memory (MB): peak = 2876.418 ; gain = 0.000 ; free physical = 23948 ; free virtual = 25802
-INFO: [Netlist 29-17] Analyzing 1811 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.29 . Memory (MB): peak = 2877.391 ; gain = 0.000 ; free physical = 23055 ; free virtual = 25064
+INFO: [Netlist 29-17] Analyzing 1803 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2900.430 ; gain = 0.000 ; free physical = 23953 ; free virtual = 25807
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2901.402 ; gain = 0.000 ; free physical = 23068 ; free virtual = 25077
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 46 instances were transformed.
   RAM16X1D => RAM32X1D (RAMD32(x2)): 4 instances
@@ -20015,16 +20013,15 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32X1D => RAM32X1D (RAMD32(x2)): 6 instances
   RAM64M => RAM64M (RAMD64E(x4)): 4 instances
 
-Synth Design complete | Checksum: 40887ef6
+Synth Design complete | Checksum: bb06ea8a
 INFO: [Common 17-83] Releasing license: Synthesis
 811 Infos, 503 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:09 ; elapsed = 00:03:00 . Memory (MB): peak = 2900.465 ; gain = 1514.473 ; free physical = 23952 ; free virtual = 25806
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 9484.075; main = 2303.035; forked = 7488.255
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 14409.703; main = 2900.434; forked = 11557.293
+synth_design: Time (s): cpu = 00:02:06 ; elapsed = 00:02:59 . Memory (MB): peak = 2901.438 ; gain = 1515.441 ; free physical = 23069 ; free virtual = 25078
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 9485.871; main = 2302.094; forked = 7490.126
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 14392.438; main = 2901.406; forked = 11539.051
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2924.441 ; gain = 0.000 ; free physical = 23949 ; free virtual = 25806
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2925.414 ; gain = 0.000 ; free physical = 23067 ; free virtual = 25079
 INFO: [Common 17-1381] The checkpoint '/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/cva6_fpga.runs/synth_1/cva6_zybo_z7_20.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2924.441 ; gain = 23.977 ; free physical = 23794 ; free virtual = 25691
 INFO: [runtcl-4] Executing : report_utilization -file cva6_zybo_z7_20_utilization_synth.rpt -pb cva6_zybo_z7_20_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri May  1 13:50:45 2026...
+INFO: [Common 17-206] Exiting Vivado at Fri May  1 18:08:43 2026...

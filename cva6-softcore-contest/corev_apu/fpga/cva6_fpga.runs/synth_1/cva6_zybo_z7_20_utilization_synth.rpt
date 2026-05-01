@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-| Date         : Fri May  1 13:50:45 2026
+| Date         : Fri May  1 18:08:43 2026
 | Host         : kador running 64-bit Ubuntu 22.04.4 LTS
 | Command      : report_utilization -file cva6_zybo_z7_20_utilization_synth.rpt -pb cva6_zybo_z7_20_utilization_synth.pb
 | Design       : cva6_zybo_z7_20
@@ -31,8 +31,8 @@ Table of Contents
 +----------------------------+-------+-------+------------+-----------+-------+
 |          Site Type         |  Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+-------+-------+------------+-----------+-------+
-| Slice LUTs*                | 20647 |     0 |          0 |     53200 | 38.81 |
-|   LUT as Logic             | 20483 |     0 |          0 |     53200 | 38.50 |
+| Slice LUTs*                | 20639 |     0 |          0 |     53200 | 38.80 |
+|   LUT as Logic             | 20475 |     0 |          0 |     53200 | 38.49 |
 |   LUT as Memory            |   164 |     0 |          0 |     17400 |  0.94 |
 |     LUT as Distributed RAM |   164 |     0 |            |           |       |
 |     LUT as Shift Register  |     0 |     0 |            |           |       |
@@ -154,12 +154,12 @@ Warning! LUT value is adjusted to account for LUT combining.
 | Ref Name |  Used | Functional Category |
 +----------+-------+---------------------+
 | FDCE     | 13255 |        Flop & Latch |
-| LUT6     |  9110 |                 LUT |
-| LUT5     |  4751 |                 LUT |
-| LUT3     |  3858 |                 LUT |
-| LUT4     |  3507 |                 LUT |
-| LUT2     |  3340 |                 LUT |
-| CARRY4   |  1332 |          CarryLogic |
+| LUT6     |  9089 |                 LUT |
+| LUT5     |  4774 |                 LUT |
+| LUT3     |  4019 |                 LUT |
+| LUT4     |  3387 |                 LUT |
+| LUT2     |  3202 |                 LUT |
+| CARRY4   |  1324 |          CarryLogic |
 | FDRE     |  1211 |        Flop & Latch |
 | MUXF7    |   384 |               MuxFx |
 | LUT1     |   264 |                 LUT |

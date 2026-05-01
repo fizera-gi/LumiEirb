@@ -24,7 +24,7 @@ package cvxif_instr_pkg;
     NMADD_RS3_R4 = 4'b1000,
     NMSUB_RS3_R4 = 4'b1001,
     //ADD_RS3_R = 4'b1111
-    ADD5_RS1 = 4'b1010,        // ADD 5
+    //ADD5_RS1 = 4'b1010,        // ADD 5
     CMUL_I16 = 4'b1011,        // 16BITS COMPLEX MULT
     CADD_I16   = 4'b1100,      // 16BITS COMPLEX ADD
     CSUB_I16  = 4'b1101,    
@@ -59,7 +59,7 @@ package cvxif_instr_pkg;
   } copro_compressed_resp_t;
 
   // 4 Possible RISCV instructions for Coprocessor
-  parameter int unsigned NbInstr = 15; // to modify whenever we add an instruction
+  parameter int unsigned NbInstr = 14; // to modify whenever we add an instruction
   parameter copro_issue_resp_t CoproInstr[NbInstr] = '{
       '{
           // Custom Nop
@@ -140,7 +140,7 @@ package cvxif_instr_pkg;
           mask: 32'b00000_11_00000_00000_1_11_00000_1111111,
           resp : '{accept : 1'b1, writeback : 1'b1, register_read : {1'b1, 1'b1, 1'b1}},
           opcode : NMADD_RS3_R4
-       },
+       },/*
       '{
 	  // ADD5: rd = rs1 + 5
 	  instr: 32'b00010_00_00000_00000_0_01_00000_1111011,
@@ -148,7 +148,7 @@ package cvxif_instr_pkg;
 	  resp : '{accept : 1'b1, writeback : 1'b1,
 		   register_read : {1'b0, 1'b0, 1'b1}}, // rs1 only
 	  opcode : ADD5_RS1
-	},
+	},*/
 	'{
 	  // CMUL_I16: complex int16 multiply
 	  instr: 32'b00011_00_00000_00000_0_01_00000_1111011,

@@ -80,6 +80,7 @@ asm volatile (".insn r 0x7b, 0x1, 0x1C, %0, x0, x0"
 return r;
 }
 
+
 /* --------------------------------------------------------------------------
  * Override macros used by KISS FFT
  * -------------------------------------------------------------------------- */
@@ -194,16 +195,26 @@ static void kf_bfly4(
         C_ADDTO( *Fout , scratch[3] );
 
         if(st->inverse) {
-            Fout[m].r = scratch[5].r - scratch[4].i;
-            Fout[m].i = scratch[5].i + scratch[4].r;
-            Fout[m3].r = scratch[5].r + scratch[4].i;
-            Fout[m3].i = scratch[5].i - scratch[4].r;
-        }else{
-            Fout[m].r = scratch[5].r + scratch[4].i;
-            Fout[m].i = scratch[5].i - scratch[4].r;
-            Fout[m3].r = scratch[5].r - scratch[4].i;
-            Fout[m3].i = scratch[5].i + scratch[4].r;
-        }
+	    kiss_fft_cpx a, b;
+
+	    a.r = scratch[5].r;
+	    a.i = scratch[5].i;
+	    b.r = scratch[4].i;
+	    b.i = -scratch[4].r;
+
+	    C_SUB(Fout[m], a, b);
+	    C_ADD(Fout[m3], a, b);
+	}else{
+	    kiss_fft_cpx a, b;
+
+	    a.r = scratch[5].r;
+	    a.i = scratch[5].i;
+	    b.r = scratch[4].i;
+	    b.i = -scratch[4].r;
+
+	    C_ADD(Fout[m], a, b);
+	    C_SUB(Fout[m3], a, b);
+	}
         ++Fout;
     }while(--k);
 }
@@ -371,7 +382,7 @@ typedef struct {
     int idx;     // sous-FFT courante
 } kf_frame_t;
 
-static void kf_work_iterative(
+static void kf_work_iterative_slow(
     kiss_fft_cpx *Fout,
     const kiss_fft_cpx *f,
     size_t fstride,
@@ -532,7 +543,42 @@ kiss_fft_cfg kiss_fft_alloc(int nfft,int inverse_fft,void * mem,size_t * lenmem 
 
     return st;
 }
+static void kf_work_iterative(
+    kiss_fft_cpx *Fout,
+    const kiss_fft_cpx *f,
+    int in_stride,
+    const kiss_fft_cfg st
+)
+{
+    int a, b, c, d;
 
+    for (a = 0; a < 4; ++a) {
+        for (b = 0; b < 4; ++b) {
+            for (c = 0; c < 4; ++c) {
+                for (d = 0; d < 4; ++d) {
+                    kiss_fft_cpx *base =
+                        Fout + a * 128 + b * 32 + c * 8 + d * 2;
+
+                    const kiss_fft_cpx *fin =
+                        f + (a + 4*b + 16*c + 64*d) * in_stride;
+
+                    base[0] = fin[0];
+                    base[1] = fin[256 * in_stride];
+
+                    kf_bfly2(base, 256, st, 1);
+                }
+
+                kf_bfly4(Fout + a * 128 + b * 32 + c * 8, 64, st, 2);
+            }
+
+            kf_bfly4(Fout + a * 128 + b * 32, 16, st, 8);
+        }
+
+        kf_bfly4(Fout + a * 128, 4, st, 32);
+    }
+
+    kf_bfly4(Fout, 1, st, 128);
+}
 
 void kiss_fft_stride(kiss_fft_cfg st,const kiss_fft_cpx *fin,kiss_fft_cpx *fout,int in_stride)
 {
@@ -551,13 +597,14 @@ void kiss_fft_stride(kiss_fft_cfg st,const kiss_fft_cpx *fin,kiss_fft_cpx *fout,
         }
 
         //kf_work(tmpbuf,fin,1,in_stride, st->factors,st);
-        kf_work_iterative(tmpbuf,fin,1,in_stride, st->factors,st);
+        //kf_work_iterative(tmpbuf,fin,1,in_stride, st->factors,st);
+        kf_work_iterative(tmpbuf, fin, in_stride, st);
         memcpy(fout,tmpbuf,sizeof(kiss_fft_cpx)*st->nfft);
         KISS_FFT_TMP_FREE(tmpbuf);
     }else{
         //kf_work( fout, fin, 1,in_stride, st->factors,st );
-        kf_work_iterative(fout,fin,1,in_stride, st->factors,st);
-
+        //kf_work_iterative(fout,fin,1,in_stride, st->factors,st);
+	kf_work_iterative(fout, fin, in_stride, st);
     }
 }
 

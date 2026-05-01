@@ -170,7 +170,7 @@ module copro_alu
         we_n = 1'b1;
       end
    
-      cvxif_instr_pkg::ADD5_RS1: begin
+      /*cvxif_instr_pkg::ADD5_RS1: begin
         result_n = registers_i[0] + 32'd5;  // Add 5 to rs1
         hartid_n = hartid_i;
         id_n     = id_i;
@@ -178,7 +178,7 @@ module copro_alu
         rd_n     = rd_i;
         we_n     = 1'b1;
       end
-      
+      */
       // ------------------------------------------------------------
       // CMUL_I16: Q15 complex multiply, packed {imag, real}
       // A = (xr + j*xi), B = (wr + j*wi)

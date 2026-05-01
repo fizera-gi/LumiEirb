@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-| Date             : Fri May  1 13:57:29 2026
+| Date             : Fri May  1 18:15:09 2026
 | Host             : kador running 64-bit Ubuntu 22.04.4 LTS
 | Command          : report_power -file cva6_zybo_z7_20_power_routed.rpt -pb cva6_zybo_z7_20_power_summary_routed.pb -rpx cva6_zybo_z7_20_power_routed.rpx
 | Design           : cva6_zybo_z7_20
@@ -53,19 +53,19 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.019 |        6 |       --- |             --- |
-| Slice Logic              |     0.012 |    42337 |       --- |             --- |
-|   LUT as Logic           |     0.011 |    20505 |     53200 |           38.54 |
-|   CARRY4                 |    <0.001 |     1215 |     13300 |            9.14 |
-|   Register               |    <0.001 |    14777 |    106400 |           13.89 |
-|   LUT as Distributed RAM |    <0.001 |      200 |     17400 |            1.15 |
+| Slice Logic              |     0.012 |    42209 |       --- |             --- |
+|   LUT as Logic           |     0.011 |    20474 |     53200 |           38.48 |
+|   CARRY4                 |    <0.001 |     1207 |     13300 |            9.08 |
+|   Register               |    <0.001 |    14775 |    106400 |           13.89 |
 |   F7/F8 Muxes            |    <0.001 |      396 |     53200 |            0.74 |
+|   LUT as Distributed RAM |    <0.001 |      200 |     17400 |            1.15 |
 |   LUT as Shift Register  |    <0.001 |       40 |     17400 |            0.23 |
 |   Others                 |     0.000 |      643 |       --- |             --- |
-| Signals                  |     0.016 |    33375 |       --- |             --- |
-| Block RAM                |     0.009 |     62.5 |       140 |           44.64 |
+| Signals                  |     0.016 |    33371 |       --- |             --- |
+| Block RAM                |     0.010 |     62.5 |       140 |           44.64 |
 | MMCM                     |     0.106 |        1 |         4 |           25.00 |
 | DSPs                     |    <0.001 |       14 |       220 |            6.36 |
-| I/O                      |     0.001 |        9 |       125 |            7.20 |
+| I/O                      |    <0.001 |        9 |       125 |            7.20 |
 | Static Power             |     0.112 |          |           |                 |
 | Total                    |     0.274 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
@@ -77,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.065 |       0.055 |      0.009 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.065 |       0.056 |      0.009 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.069 |       0.059 |      0.011 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -157,12 +157,12 @@ Table of Contents
 | Name                                    | Power (W) |
 +-----------------------------------------+-----------+
 | cva6_zybo_z7_20                         |     0.162 |
-|   i_ariane                              |     0.027 |
-|     i_cva6                              |     0.027 |
+|   i_ariane                              |     0.029 |
+|     i_cva6                              |     0.029 |
 |       csr_regfile_i                     |     0.001 |
 |       ex_stage_i                        |     0.003 |
 |       gen_cache_hpd.i_cache_subsystem   |     0.014 |
-|       i_frontend                        |     0.002 |
+|       i_frontend                        |     0.003 |
 |       issue_stage_i                     |     0.006 |
 |   i_ariane_peripherals                  |     0.009 |
 |     gen_timer.i_axi2apb_64_32_timer     |     0.002 |
@@ -170,13 +170,12 @@ Table of Contents
 |       UART_RXFF                         |     0.001 |
 |     i_axi2apb_64_32_plic                |     0.003 |
 |       slave_ar_buffer_i                 |     0.001 |
-|   i_axi_riscv_atomics                   |     0.002 |
-|     i_atomics                           |     0.002 |
+|   i_axi_riscv_atomics                   |     0.001 |
+|     i_atomics                           |     0.001 |
 |   i_axi_xbar                            |     0.009 |
 |     i_xbar                              |     0.009 |
-|       gen_mst_port_mux[0].i_axi_mux     |     0.001 |
-|       gen_slv_port_demux[0].i_axi_demux |     0.003 |
-|       gen_slv_port_demux[1].i_axi_demux |     0.002 |
+|       gen_slv_port_demux[0].i_axi_demux |     0.002 |
+|       gen_slv_port_demux[1].i_axi_demux |     0.001 |
 |   i_dm_top                              |     0.001 |
 |   i_xlnx_blk_mem_gen                    |     0.002 |
 |     U0                                  |     0.002 |
