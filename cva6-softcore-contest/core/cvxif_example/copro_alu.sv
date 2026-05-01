@@ -169,15 +169,7 @@ module copro_alu
         rd_n = rd_i;
         we_n = 1'b1;
       end
-      cvxif_instr_pkg::ADD_RS3_R: begin
-        result_n = NrRgprPorts == 3 ? registers_i[2] + registers_i[1] + registers_i[0] : registers_i[1] + registers_i[0];
-        hartid_n = hartid_i;
-        id_n = id_i;
-        valid_n = 1'b1;
-        rd_n = 5'b01010; // this line was not in the old one and it was replaced by the one below
-        //rd_n = rd_i;
-        we_n = 1'b1;
-      end
+   
       cvxif_instr_pkg::ADD5_RS1: begin
         result_n = registers_i[0] + 32'd5;  // Add 5 to rs1
         hartid_n = hartid_i;
@@ -271,9 +263,15 @@ module copro_alu
 	  p2 = x1i * twi;
 	  p3 = x1r * twi;
 	  p4 = x1i * twr;
-
+          /*
 	  tr = (p1 - p2) >>> 15;
-	  ti = (p3 + p4) >>> 15;
+	  ti = (p3 + p4) >>> 15;*/
+	  
+	  tr_q30 = p1 - p2;
+	  ti_q30 = p3 + p4;
+
+	  tr = (tr_q30 + (1 <<< 14)) >>> 15;
+	  ti = (ti_q30 + (1 <<< 14)) >>> 15;
 
 	  // y0/y1
 	  y0r = x0r + tr;  y0i = x0i + ti;

@@ -66,7 +66,7 @@ static inline void cus_settw_u32(uint32_t tw)
 static inline uint32_t cus_bfly2_u32(uint32_t x0, uint32_t x1) {
   uint32_t r;
 asm volatile (".insn r 0x7b, 0x1, 0x2C, %0, %1, %2"
-                : "=r"(r) : "r"(x0), "r"(x1));
+                : "=r"(r) : "r"(x0), "r"(x1) : "memory" );
 return r;
 }
 
@@ -74,7 +74,9 @@ return r;
 static inline uint32_t cus_gety1_u32(void) {
   uint32_t r;
 asm volatile (".insn r 0x7b, 0x1, 0x1C, %0, x0, x0"
-                : "=r"(r));
+                : "=r"(r)
+                :  
+                : "memory" );
 return r;
 }
 
@@ -98,8 +100,30 @@ return r;
 /* The guts header contains all the multiplication and addition macros that are defined for
  fixed or floating point complex numbers.  It also delares the kf_ internal functions.
  */
+/*
+static void kf_bfly2(
+        kiss_fft_cpx * Fout,
+        const size_t fstride,
+        const kiss_fft_cfg st,
+        int m
+        )
+{
+    kiss_fft_cpx * Fout2;
+    kiss_fft_cpx * tw1 = st->twiddles;
+    kiss_fft_cpx t;
+    Fout2 = Fout + m;
+    do{
+        C_FIXDIV(*Fout,2); C_FIXDIV(*Fout2,2);
 
-
+        C_MUL (t,  *Fout2 , *tw1);
+        tw1 += fstride;
+        C_SUB( *Fout2 ,  *Fout , t );
+        C_ADDTO( *Fout ,  t );
+        ++Fout2;
+        ++Fout;
+    }while (--m);
+}
+*/
 static void kf_bfly2(
         kiss_fft_cpx* Fout,
         const size_t fstride,

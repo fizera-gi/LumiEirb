@@ -23,7 +23,6 @@ package cvxif_instr_pkg;
     MSUB_RS3_R4 = 4'b0111,
     NMADD_RS3_R4 = 4'b1000,
     NMSUB_RS3_R4 = 4'b1001,
-    ADD5_RS1 = 4'b1010, // just added
     //ADD_RS3_R = 4'b1111
     ADD5_RS1 = 4'b1010,        // ADD 5
     CMUL_I16 = 4'b1011,        // 16BITS COMPLEX MULT
@@ -142,62 +141,62 @@ package cvxif_instr_pkg;
           resp : '{accept : 1'b1, writeback : 1'b1, register_read : {1'b1, 1'b1, 1'b1}},
           opcode : NMADD_RS3_R4
        },
-+      '{
-+	  // ADD5: rd = rs1 + 5
-+	  instr: 32'b00010_00_00000_00000_0_01_00000_1111011,
-+	  mask : 32'b11111_11_00000_00000_1_11_00000_1111111,
-+	  resp : '{accept : 1'b1, writeback : 1'b1,
-+		   register_read : {1'b0, 1'b0, 1'b1}}, // rs1 only
-+	  opcode : ADD5_RS1
-+	},
-+	'{
-+	  // CMUL_I16: complex int16 multiply
-+	  instr: 32'b00011_00_00000_00000_0_01_00000_1111011,
-+	  mask : 32'b11111_11_00000_00000_1_11_00000_1111111,
-+	  resp : '{accept : 1'b1, writeback : 1'b1,
-+		   register_read : {1'b0, 1'b1, 1'b1}}, // rs1 + rs2
-+	  opcode : CMUL_I16
-+	},
-+	'{
-+	  // CADD_I16: complex add int16 (packed {imag,real})
-+	  instr: 32'b00100_00_00000_00000_0_01_00000_1111011,  // funct7=0x10, funct3=001, custom3
-+	  mask : 32'b11111_11_00000_00000_1_11_00000_1111111,
-+	  resp : '{accept : 1'b1, writeback : 1'b1, register_read : {1'b0, 1'b1, 1'b1}},
-+	  opcode : CADD_I16
-+	},
-+	'{
-+	  // CSUB_I16: complex sub int16 (packed {imag,real})
-+	  instr: 32'b00101_00_00000_00000_0_01_00000_1111011,  // funct7=0x14, funct3=001, custom3
-+	  mask : 32'b11111_11_00000_00000_1_11_00000_1111111,
-+	  resp : '{accept : 1'b1, writeback : 1'b1, register_read : {1'b0, 1'b1, 1'b1}},
-+	  opcode : CSUB_I16
-+	},
-+	// SETTW_I16
-+	'{
-+	  instr: 32'b01010_00_00000_00000_0_01_00000_1111011, // funct7=0x28 (ex)
-+	  mask : 32'b11111_11_00000_00000_1_11_00000_1111111,
-+	  resp : '{accept:1'b1, writeback:1'b0, register_read:{1'b0,1'b0,1'b1}}, // rs1 only
-+	  opcode : SETTW_I16
-+	},
-+
-+	// BFLY2_TW_I16
-+	'{
-+	  instr: 32'b01011_00_00000_00000_0_01_00000_1111011, // funct7=0x2C (ex)
-+	  mask : 32'b11111_11_00000_00000_1_11_00000_1111111,
-+	  resp : '{accept:1'b1, writeback:1'b1, register_read:{1'b0,1'b1,1'b1}}, // rs1+rs2
-+	  opcode : BFLY2_I16
-+	},
-+
-+	'{
-+	  // GETY1_I16: rd <- shadow_y1 (no reg read needed)
-+	  instr: 32'b00111_00_00000_00000_0_01_00000_1111011,  // funct7=0x1C, funct3=001, custom3
-+	  mask : 32'b11111_11_00000_00000_1_11_00000_1111111,
-+	  resp : '{accept : 1'b1, writeback : 1'b1, register_read : {1'b0, 1'b0, 1'b0}},
-+	  opcode : GETY1_I16
-+	}
-+
-+	
-+	    
+      '{
+	  // ADD5: rd = rs1 + 5
+	  instr: 32'b00010_00_00000_00000_0_01_00000_1111011,
+	  mask : 32'b11111_11_00000_00000_1_11_00000_1111111,
+	  resp : '{accept : 1'b1, writeback : 1'b1,
+		   register_read : {1'b0, 1'b0, 1'b1}}, // rs1 only
+	  opcode : ADD5_RS1
+	},
+	'{
+	  // CMUL_I16: complex int16 multiply
+	  instr: 32'b00011_00_00000_00000_0_01_00000_1111011,
+	  mask : 32'b11111_11_00000_00000_1_11_00000_1111111,
+	  resp : '{accept : 1'b1, writeback : 1'b1,
+		   register_read : {1'b0, 1'b1, 1'b1}}, // rs1 + rs2
+	  opcode : CMUL_I16
+	},
+	'{
+	  // CADD_I16: complex add int16 (packed {imag,real})
+	  instr: 32'b00100_00_00000_00000_0_01_00000_1111011,  // funct7=0x10, funct3=001, custom3
+	  mask : 32'b11111_11_00000_00000_1_11_00000_1111111,
+	  resp : '{accept : 1'b1, writeback : 1'b1, register_read : {1'b0, 1'b1, 1'b1}},
+	  opcode : CADD_I16
+	},
+	'{
+	  // CSUB_I16: complex sub int16 (packed {imag,real})
+	  instr: 32'b00101_00_00000_00000_0_01_00000_1111011,  // funct7=0x14, funct3=001, custom3
+	  mask : 32'b11111_11_00000_00000_1_11_00000_1111111,
+	  resp : '{accept : 1'b1, writeback : 1'b1, register_read : {1'b0, 1'b1, 1'b1}},
+	  opcode : CSUB_I16
+	},
+	// SETTW_I16
+	'{
+	  instr: 32'b01010_00_00000_00000_0_01_00000_1111011, // funct7=0x28 (ex)
+	  mask : 32'b11111_11_00000_00000_1_11_00000_1111111,
+	  resp : '{accept:1'b1, writeback:1'b0, register_read:{1'b0,1'b0,1'b1}}, // rs1 only
+	  opcode : SETTW_I16
+	},
+
+	// BFLY2_TW_I16
+	'{
+	  instr: 32'b01011_00_00000_00000_0_01_00000_1111011, // funct7=0x2C (ex)
+	  mask : 32'b11111_11_00000_00000_1_11_00000_1111111,
+	  resp : '{accept:1'b1, writeback:1'b1, register_read:{1'b0,1'b1,1'b1}}, // rs1+rs2
+	  opcode : BFLY2_I16
+	},
+
+	'{
+	  // GETY1_I16: rd <- shadow_y1 (no reg read needed)
+	  instr: 32'b00111_00_00000_00000_0_01_00000_1111011,  // funct7=0x1C, funct3=001, custom3
+	  mask : 32'b11111_11_00000_00000_1_11_00000_1111111,
+	  resp : '{accept : 1'b1, writeback : 1'b1, register_read : {1'b0, 1'b0, 1'b0}},
+	  opcode : GETY1_I16
+	}
+
+	
+	    
    };
 
   parameter int unsigned NbCompInstr = 2;

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-| Date         : Mon Apr 20 20:10:51 2026
+| Date         : Fri May  1 13:50:58 2026
 | Host         : kador running 64-bit Ubuntu 22.04.4 LTS
 | Command      : report_timing -nworst 1 -delay_type max -sort_by group -file reports_cva6_fpga_synth/cva6_fpga.timing.rpt
 | Design       : cva6_zybo_z7_20
@@ -12,16 +12,16 @@ Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanc
 
 Timing Report
 
-Slack (MET) :             1.663ns  (required time - arrival time)
-  Source:                 i_ariane/i_cva6/csr_regfile_i/pmpaddr_q_reg[7][0]/C
+Slack (VIOLATED) :        -6.932ns  (required time - arrival time)
+  Source:                 i_ariane/i_cva6/issue_stage_i/i_scoreboard/commit_pointer_q_reg[0][1]/C
                             (rising edge-triggered cell FDCE clocked by clk_out1_xlnx_clk_gen  {rise@0.000ns fall@12.500ns period=25.000ns})
-  Destination:            i_ariane/i_cva6/ex_stage_i/lsu_i/lsu_bypass_i/mem_q_reg[0][be][0]/CE
+  Destination:            i_ariane/gen_example_coprocessor.i_cvxif_coprocessor/i_copro_alu/result_q_reg[12]/D
                             (rising edge-triggered cell FDCE clocked by clk_out1_xlnx_clk_gen  {rise@0.000ns fall@12.500ns period=25.000ns})
   Path Group:             clk_out1_xlnx_clk_gen
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            25.000ns  (clk_out1_xlnx_clk_gen rise@25.000ns - clk_out1_xlnx_clk_gen rise@0.000ns)
-  Data Path Delay:        22.908ns  (logic 5.112ns (22.315%)  route 17.796ns (77.685%))
-  Logic Levels:           33  (CARRY4=1 LUT2=3 LUT3=3 LUT4=5 LUT5=5 LUT6=16)
+  Data Path Delay:        31.749ns  (logic 12.862ns (40.512%)  route 18.887ns (59.488%))
+  Logic Levels:           41  (CARRY4=12 DSP48E1=2 LUT1=1 LUT2=2 LUT3=4 LUT4=1 LUT5=5 LUT6=14)
   Clock Path Skew:        -0.145ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    -2.245ns = ( 22.755 - 25.000 ) 
     Source Clock Delay      (SCD):    -1.569ns
@@ -43,79 +43,108 @@ Slack (MET) :             1.663ns  (required time - arrival time)
                                                      -5.113    -3.054 r  i_xlnx_clk_gen/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, unplaced)         0.800    -2.254    i_xlnx_clk_gen/inst/clk_out1_xlnx_clk_gen
                          BUFG (Prop_bufg_I_O)         0.101    -2.153 r  i_xlnx_clk_gen/inst/clkout1_buf/O
-                         net (fo=16187, unplaced)     0.584    -1.569    i_ariane/i_cva6/csr_regfile_i/clk_out1
-                         FDCE                                         r  i_ariane/i_cva6/csr_regfile_i/pmpaddr_q_reg[7][0]/C
+                         net (fo=16329, unplaced)     0.584    -1.569    i_ariane/i_cva6/issue_stage_i/i_scoreboard/clk_out1
+                         FDCE                                         r  i_ariane/i_cva6/issue_stage_i/i_scoreboard/commit_pointer_q_reg[0][1]/C
   -------------------------------------------------------------------    -------------------
-                         FDCE (Prop_fdce_C_Q)         0.478    -1.091 r  i_ariane/i_cva6/csr_regfile_i/pmpaddr_q_reg[7][0]/Q
-                         net (fo=9, unplaced)         0.511    -0.580    i_ariane/i_cva6/csr_regfile_i/pmpaddr_q_reg[7][31]_0[0]
-                         LUT2 (Prop_lut2_I0_O)        0.321    -0.259 r  i_ariane/i_cva6/csr_regfile_i/gen_register.d_o[100]_i_798/O
-                         net (fo=1, unplaced)         0.449     0.190    i_ariane/i_cva6/csr_regfile_i/gen_register.d_o[100]_i_798_n_0
-                         LUT6 (Prop_lut6_I4_O)        0.124     0.314 r  i_ariane/i_cva6/csr_regfile_i/gen_register.d_o[100]_i_711/O
-                         net (fo=3, unplaced)         0.467     0.781    i_ariane/i_cva6/csr_regfile_i/pmpaddr_q_reg[7][4]_0
-                         LUT6 (Prop_lut6_I5_O)        0.124     0.905 r  i_ariane/i_cva6/csr_regfile_i/gen_register.d_o[100]_i_716/O
-                         net (fo=3, unplaced)         0.467     1.372    i_ariane/i_cva6/csr_regfile_i/gen_register.d_o[100]_i_716_n_0
-                         LUT3 (Prop_lut3_I2_O)        0.116     1.488 r  i_ariane/i_cva6/csr_regfile_i/gen_register.d_o[100]_i_536/O
-                         net (fo=4, unplaced)         0.473     1.961    i_ariane/i_cva6/csr_regfile_i/gen_register.d_o[100]_i_536_n_0
-                         LUT5 (Prop_lut5_I2_O)        0.116     2.077 r  i_ariane/i_cva6/csr_regfile_i/gen_register.d_o[100]_i_715/O
-                         net (fo=3, unplaced)         0.467     2.544    i_ariane/i_cva6/csr_regfile_i/gen_register.d_o[100]_i_715_n_0
-                         LUT3 (Prop_lut3_I2_O)        0.116     2.660 r  i_ariane/i_cva6/csr_regfile_i/gen_register.d_o[100]_i_532/O
-                         net (fo=4, unplaced)         0.473     3.133    i_ariane/i_cva6/csr_regfile_i/gen_register.d_o[100]_i_532_n_0
-                         LUT5 (Prop_lut5_I2_O)        0.116     3.249 r  i_ariane/i_cva6/csr_regfile_i/gen_register.d_o[100]_i_539/O
-                         net (fo=3, unplaced)         0.467     3.716    i_ariane/i_cva6/csr_regfile_i/gen_register.d_o[100]_i_539_n_0
-                         LUT3 (Prop_lut3_I2_O)        0.124     3.840 r  i_ariane/i_cva6/csr_regfile_i/gen_register.d_o[100]_i_323/O
-                         net (fo=6, unplaced)         0.481     4.321    i_ariane/i_cva6/csr_regfile_i/gen_register.d_o[100]_i_323_n_0
-                         LUT6 (Prop_lut6_I5_O)        0.124     4.445 r  i_ariane/i_cva6/csr_regfile_i/gen_register.d_o[100]_i_135/O
-                         net (fo=1, unplaced)         0.000     4.445    i_ariane/i_cva6/csr_regfile_i/gen_register.d_o[100]_i_135_n_0
+                         FDCE (Prop_fdce_C_Q)         0.478    -1.091 r  i_ariane/i_cva6/issue_stage_i/i_scoreboard/commit_pointer_q_reg[0][1]/Q
+                         net (fo=6, unplaced)         0.502    -0.589    i_ariane/i_cva6/issue_stage_i/i_scoreboard/commit_pointer_q_reg[0][1]_0[1]
+                         LUT2 (Prop_lut2_I0_O)        0.295    -0.294 r  i_ariane/i_cva6/issue_stage_i/i_scoreboard/regfile_ram_block[0].mem_reg[0][0]_r1_0_31_0_5_i_26/O
+                         net (fo=171, unplaced)       0.532     0.238    i_ariane/i_cva6/issue_stage_i/i_scoreboard/regfile_ram_block[0].mem_reg[0][0]_r1_0_31_0_5_i_26_n_0
+                         LUT4 (Prop_lut4_I0_O)        0.150     0.388 f  i_ariane/i_cva6/issue_stage_i/i_scoreboard/speculative_read_pointer_q[1]_i_7/O
+                         net (fo=2, unplaced)         0.913     1.301    i_ariane/i_cva6/issue_stage_i/i_scoreboard/speculative_read_pointer_q[1]_i_7_n_0
+                         LUT5 (Prop_lut5_I1_O)        0.124     1.425 r  i_ariane/i_cva6/issue_stage_i/i_scoreboard/speculative_read_pointer_q[1]_i_3/O
+                         net (fo=46, unplaced)        1.191     2.616    i_ariane/i_cva6/issue_stage_i/i_scoreboard/speculative_read_pointer_q[1]_i_3_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     2.740 r  i_ariane/i_cva6/issue_stage_i/i_scoreboard/mstatus_q[mpp][1]_i_4/O
+                         net (fo=5, unplaced)         0.930     3.670    i_ariane/i_cva6/issue_stage_i/i_scoreboard/mstatus_q[mpp][1]_i_4_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     3.794 f  i_ariane/i_cva6/issue_stage_i/i_scoreboard/i___50_i_8__0/O
+                         net (fo=5, unplaced)         0.447     4.241    i_ariane/i_cva6/issue_stage_i/i_scoreboard/mem_q_reg[2][sbe][op][5]_0
+                         LUT6 (Prop_lut6_I2_O)        0.124     4.365 r  i_ariane/i_cva6/issue_stage_i/i_scoreboard/debug_mode_q_i_5/O
+                         net (fo=2, unplaced)         0.913     5.278    i_ariane/i_cva6/issue_stage_i/i_scoreboard/ex_commit[cause][1]
+                         LUT5 (Prop_lut5_I1_O)        0.124     5.402 f  i_ariane/i_cva6/issue_stage_i/i_scoreboard/debug_mode_q_i_2/O
+                         net (fo=5, unplaced)         0.930     6.332    i_ariane/i_cva6/csr_regfile_i/debug_mode_q_reg_7
+                         LUT6 (Prop_lut6_I1_O)        0.124     6.456 f  i_ariane/i_cva6/csr_regfile_i/i___50_i_2__0/O
+                         net (fo=6, unplaced)         0.451     6.907    i_ariane/i_cva6/issue_stage_i/i_scoreboard/set_debug_pc
+                         LUT5 (Prop_lut5_I1_O)        0.124     7.031 f  i_ariane/i_cva6/issue_stage_i/i_scoreboard/i___50_i_1__0/O
+                         net (fo=141, unplaced)       0.557     7.588    i_ariane/i_cva6/issue_stage_i/i_issue_read_operands/mem_q_reg[1][sbe][ex][valid]
+                         LUT3 (Prop_lut3_I2_O)        0.124     7.712 r  i_ariane/i_cva6/issue_stage_i/i_issue_read_operands/i___2_i_70/O
+                         net (fo=1, unplaced)         0.449     8.161    i_ariane/i_cva6/ex_stage_i/i___2_i_20__0
+                         LUT6 (Prop_lut6_I3_O)        0.124     8.285 f  i_ariane/i_cva6/ex_stage_i/i___2_i_37__0/O
+                         net (fo=1, unplaced)         0.449     8.734    i_ariane/i_cva6/id_stage_i/flu_ready_ex_id
+                         LUT6 (Prop_lut6_I5_O)        0.124     8.858 f  i_ariane/i_cva6/id_stage_i/i___2_i_20__0/O
+                         net (fo=1, unplaced)         0.449     9.307    i_ariane/i_cva6/id_stage_i/i___2_i_20__0_n_0
+                         LUT3 (Prop_lut3_I1_O)        0.124     9.431 r  i_ariane/i_cva6/id_stage_i/i___2_i_10/O
+                         net (fo=3, unplaced)         0.467     9.898    i_ariane/i_cva6/issue_stage_i/i_scoreboard/issue_pointer_q[1]_i_6_0
+                         LUT5 (Prop_lut5_I4_O)        0.124    10.022 f  i_ariane/i_cva6/issue_stage_i/i_scoreboard/i___2_i_6__0/O
+                         net (fo=8, unplaced)         0.457    10.479    i_ariane/i_cva6/issue_stage_i/i_scoreboard/issue_q_reg[0][sbe][rd][4]
+                         LUT5 (Prop_lut5_I4_O)        0.124    10.603 f  i_ariane/i_cva6/issue_stage_i/i_scoreboard/i___2_i_2__0/O
+                         net (fo=27, unplaced)        0.516    11.119    i_ariane/gen_example_coprocessor.i_cvxif_coprocessor/cvxif_req[issue_valid]
+                         LUT6 (Prop_lut6_I5_O)        0.124    11.243 r  i_ariane/gen_example_coprocessor.i_cvxif_coprocessor/i___3/O
+                         net (fo=5, unplaced)         0.930    12.173    i_ariane/i_cva6/id_stage_i/result_n3__1
+                         LUT6 (Prop_lut6_I1_O)        0.124    12.297 r  i_ariane/i_cva6/id_stage_i/i___4_i_5/O
+                         net (fo=9, unplaced)         0.943    13.240    i_ariane/i_cva6/id_stage_i/i___4_i_5_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124    13.364 f  i_ariane/i_cva6/id_stage_i/i___4_i_1/O
+                         net (fo=35, unplaced)        0.522    13.886    i_ariane/gen_example_coprocessor.i_cvxif_coprocessor/id_q_reg[1]_0
+                         LUT3 (Prop_lut3_I0_O)        0.124    14.010 f  i_ariane/gen_example_coprocessor.i_cvxif_coprocessor/i___6/O
+                         net (fo=6, unplaced)         0.481    14.491    i_ariane/i_cva6/issue_stage_i/i_scoreboard/cvxif_resp[issue_resp][accept]
+                         LUT6 (Prop_lut6_I5_O)        0.124    14.615 r  i_ariane/i_cva6/issue_stage_i/i_scoreboard/i___12__0_i_1/O
+                         net (fo=5, unplaced)         0.477    15.092    i_ariane/i_cva6/issue_stage_i/i_scoreboard/issue_q_reg[0][sbe][valid]
+                         LUT6 (Prop_lut6_I5_O)        0.124    15.216 r  i_ariane/i_cva6/issue_stage_i/i_scoreboard/i__i_7/O
+                         net (fo=32, unplaced)        0.520    15.736    i_ariane/i_cva6/id_stage_i/fu_data_q_reg[0][operand_b][0]_0
+                         LUT6 (Prop_lut6_I3_O)        0.124    15.860 r  i_ariane/i_cva6/id_stage_i/i___188_i_2/O
+                         net (fo=7, unplaced)         0.484    16.344    i_ariane/i_cva6/id_stage_i/issue_q_reg[0][sbe][result][31]_0[29]
+                         LUT2 (Prop_lut2_I0_O)        0.124    16.468 r  i_ariane/i_cva6/id_stage_i/result_n3__0_i_18/O
+                         net (fo=4, unplaced)         0.800    17.268    i_ariane/gen_example_coprocessor.i_cvxif_coprocessor/i_copro_alu/result_n4__1_0[14]
+                         DSP48E1 (Prop_dsp48e1_A[14]_P[1])
+                                                      3.841    21.109 f  i_ariane/gen_example_coprocessor.i_cvxif_coprocessor/i_copro_alu/result_n4__0/P[1]
+                         net (fo=1, unplaced)         0.800    21.908    i_ariane/gen_example_coprocessor.i_cvxif_coprocessor/i_copro_alu/result_n4__0_n_104
+                         LUT1 (Prop_lut1_I0_O)        0.124    22.032 r  i_ariane/gen_example_coprocessor.i_cvxif_coprocessor/i_copro_alu/result_n2_i_27/O
+                         net (fo=1, unplaced)         0.000    22.032    i_ariane_n_6
                          CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533     4.978 r  i_ariane/i_cva6/csr_regfile_i/lsu_i/i_pmp_data_if/i_pmp_data/gen_pmp.genblk1[7].i_pmp_entry/gen_register.d_o_reg[100]_i_39/CO[3]
-                         net (fo=1, unplaced)         0.918     5.896    i_ariane/i_cva6/csr_regfile_i/lsu_i/i_pmp_data_if/i_pmp_data/gen_pmp.genblk1[7].i_pmp_entry/gen_register.d_o_reg[100]_i_39_n_0
-                         LUT6 (Prop_lut6_I4_O)        0.124     6.020 r  i_ariane/i_cva6/csr_regfile_i/gen_register.d_o[100]_i_15/O
-                         net (fo=2, unplaced)         0.913     6.933    i_ariane/i_cva6/csr_regfile_i/gen_register.d_o[100]_i_15_n_0
-                         LUT6 (Prop_lut6_I3_O)        0.124     7.057 r  i_ariane/i_cva6/csr_regfile_i/gen_register.d_o[100]_i_4/O
-                         net (fo=3, unplaced)         0.920     7.977    i_ariane/i_cva6/csr_regfile_i/gen_register.d_o[100]_i_4_n_0
-                         LUT5 (Prop_lut5_I3_O)        0.124     8.101 r  i_ariane/i_cva6/csr_regfile_i/gen_register.d_o[100]_i_1/O
-                         net (fo=54, unplaced)        0.533     8.634    i_ariane/i_cva6/ex_stage_i/lsu_i/i_load_unit/gen_register.d_o[147]_i_2_0[0]
-                         LUT6 (Prop_lut6_I4_O)        0.124     8.758 r  i_ariane/i_cva6/ex_stage_i/lsu_i/i_load_unit/gen_register.d_o[166]_i_4/O
-                         net (fo=5, unplaced)         0.477     9.235    i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/dcache_req_ports_ex_cache[1][kill_req]
-                         LUT6 (Prop_lut6_I0_O)        0.124     9.359 r  i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/tail_q[3]_i_4/O
-                         net (fo=5, unplaced)         0.477     9.836    i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/arb_req_gnt_q_reg[1]_0
-                         LUT5 (Prop_lut5_I4_O)        0.124     9.960 r  i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/valid_q[3]_i_5/O
-                         net (fo=3, unplaced)         0.467    10.427    i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_rtab_i/st2_mshr_alloc_need_rsp_q_reg
-                         LUT2 (Prop_lut2_I1_O)        0.116    10.543 f  i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_rtab_i/st2_dir_updt_valid_q_i_4/O
-                         net (fo=19, unplaced)        0.508    11.051    i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_rtab_i/st1_req_rtab_q_reg
-                         LUT4 (Prop_lut4_I0_O)        0.116    11.167 f  i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_rtab_i/mem_reg_0_i_66__0/O
-                         net (fo=83, unplaced)        0.544    11.711    i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_rtab_i/st1_req_q_reg[op][4]_0
-                         LUT2 (Prop_lut2_I0_O)        0.124    11.835 f  i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_rtab_i/st2_dir_updt_valid_q_i_7/O
-                         net (fo=6, unplaced)         0.481    12.316    i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_dir_sram[1].dir_sram/ram_i/st2_dir_updt_valid_q_reg
-                         LUT6 (Prop_lut6_I3_O)        0.124    12.440 f  i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_dir_sram[1].dir_sram/ram_i/i___52_i_5/O
-                         net (fo=1, unplaced)         0.449    12.889    i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_dir_sram[1].dir_sram/ram_i/core_rsp_valid
-                         LUT6 (Prop_lut6_I0_O)        0.124    13.013 f  i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_dir_sram[1].dir_sram/ram_i/i___52_i_2/O
-                         net (fo=6, unplaced)         0.481    13.494    i_ariane/i_cva6/ex_stage_i/lsu_i/lsu_bypass_i/dcache_req_ports_cache_ex[1][data_rvalid]
-                         LUT6 (Prop_lut6_I5_O)        0.124    13.618 f  i_ariane/i_cva6/ex_stage_i/lsu_i/lsu_bypass_i/i___435_i_1/O
-                         net (fo=7, unplaced)         0.484    14.102    i_ariane/i_cva6/ex_stage_i/i_load_unit/req_port_o1__1
-                         LUT6 (Prop_lut6_I0_O)        0.124    14.226 f  i_ariane/i_cva6/ex_stage_i/i___435/O
-                         net (fo=84, unplaced)        0.544    14.770    i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/core_req_arbiter_i/req_arbiter_i/dcache_req_ports_ex_cache[1][data_req]
-                         LUT4 (Prop_lut4_I1_O)        0.116    14.886 r  i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/core_req_arbiter_i/req_arbiter_i/st1_req_q[phys_indexed]_i_2/O
-                         net (fo=25, unplaced)        0.514    15.400    i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_rtab_i/pop_arb_i/st1_req_q_reg[phys_indexed]_0
-                         LUT6 (Prop_lut6_I4_O)        0.124    15.524 r  i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_rtab_i/pop_arb_i/wait_q_i_24/O
-                         net (fo=1, unplaced)         0.449    15.973    i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_rtab_i/pop_arb_i/wait_q_i_24_n_0
-                         LUT6 (Prop_lut6_I3_O)        0.124    16.097 r  i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_rtab_i/pop_arb_i/wait_q_i_16/O
-                         net (fo=3, unplaced)         0.920    17.017    i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_rtab_i/pop_arb_i/req_q_reg[1][req][op][0]
-                         LUT6 (Prop_lut6_I2_O)        0.124    17.141 f  i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_rtab_i/pop_arb_i/wait_q_i_5__0/O
-                         net (fo=2, unplaced)         0.460    17.601    i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_dir_sram[1].dir_sram/ram_i/st1_req_valid_q_reg_5
-                         LUT6 (Prop_lut6_I4_O)        0.124    17.725 r  i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_dir_sram[1].dir_sram/ram_i/st1_req_q[op][4]_i_5/O
-                         net (fo=4, unplaced)         0.473    18.198    i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_dir_sram[1].dir_sram/ram_i/arb_req_gnt_q_reg[1]
-                         LUT4 (Prop_lut4_I2_O)        0.124    18.322 r  i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_dir_sram[1].dir_sram/ram_i/i___358_i_2/O
-                         net (fo=5, unplaced)         0.477    18.799    i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/core_req_arbiter_i/req_arbiter_i/wait_q_reg_3
-                         LUT4 (Prop_lut4_I3_O)        0.116    18.915 r  i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/core_req_arbiter_i/req_arbiter_i/i___358_i_1/O
-                         net (fo=9, unplaced)         0.490    19.405    i_ariane/i_cva6/ex_stage_i/lsu_i/lsu_bypass_i/dcache_req_ports_cache_ex[1][data_gnt]
-                         LUT4 (Prop_lut4_I1_O)        0.124    19.529 r  i_ariane/i_cva6/ex_stage_i/lsu_i/lsu_bypass_i/i___49_i_4/O
-                         net (fo=1, unplaced)         0.449    19.978    i_ariane/i_cva6/ex_stage_i/lsu_i/i_load_unit/pop_ld_o10_out__1
-                         LUT6 (Prop_lut6_I5_O)        0.124    20.102 r  i_ariane/i_cva6/ex_stage_i/lsu_i/i_load_unit/i___49_i_1/O
-                         net (fo=89, unplaced)        0.546    20.648    i_ariane/i_cva6/ex_stage_i/pop_ld
-                         LUT5 (Prop_lut5_I0_O)        0.124    20.772 r  i_ariane/i_cva6/ex_stage_i/i___275/O
-                         net (fo=80, unplaced)        0.567    21.339    i_ariane/i_cva6/ex_stage_i/lsu_i/lsu_bypass_i/E[0]
-                         FDCE                                         r  i_ariane/i_cva6/ex_stage_i/lsu_i/lsu_bypass_i/mem_q_reg[0][be][0]/CE
+                                                      0.533    22.565 r  i_copro_alu/result_n2_i_5/CO[3]
+                         net (fo=1, unplaced)         0.009    22.574    i_copro_alu/result_n2_i_5_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    22.691 r  i_copro_alu/result_n2_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000    22.691    i_copro_alu/result_n2_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    22.808 r  i_copro_alu/result_n2_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000    22.808    i_copro_alu/result_n2_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    22.925 r  i_copro_alu/result_n2_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000    22.925    i_copro_alu/result_n2_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    23.042 r  i_copro_alu/result_n2_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000    23.042    i_copro_alu/result_n2_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    23.159 r  i_copro_alu/result_n2_i_8/CO[3]
+                         net (fo=1, unplaced)         0.000    23.159    i_copro_alu/result_n2_i_8_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    23.276 r  i_copro_alu/result_n2_i_7/CO[3]
+                         net (fo=1, unplaced)         0.000    23.276    i_ariane/gen_example_coprocessor.i_cvxif_coprocessor/i_copro_alu/result_n2__0_2[0]
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.337    23.613 r  i_ariane/gen_example_coprocessor.i_cvxif_coprocessor/i_copro_alu/result_n2_i_6/O[1]
+                         net (fo=1, unplaced)         0.800    24.413    i_ariane/gen_example_coprocessor.i_cvxif_coprocessor/i_copro_alu/result_n3__2[29]
+                         DSP48E1 (Prop_dsp48e1_A[11]_P[16])
+                                                      2.256    26.669 r  i_ariane/gen_example_coprocessor.i_cvxif_coprocessor/i_copro_alu/result_n2__0/P[16]
+                         net (fo=2, unplaced)         0.800    27.469    i_ariane/gen_example_coprocessor.i_cvxif_coprocessor/p_0_in[1]
+                         LUT3 (Prop_lut3_I2_O)        0.124    27.593 r  i_ariane/gen_example_coprocessor.i_cvxif_coprocessor/i___18/O
+                         net (fo=1, unplaced)         0.000    27.593    i_ariane/gen_example_coprocessor.i_cvxif_coprocessor/i_copro_alu/result_q[0]_i_4_0[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    28.126 r  i_ariane/gen_example_coprocessor.i_cvxif_coprocessor/i_copro_alu/result_n0__246_carry/CO[3]
+                         net (fo=1, unplaced)         0.009    28.135    i_ariane/gen_example_coprocessor.i_cvxif_coprocessor/i_copro_alu/result_n0__246_carry_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    28.252 r  i_ariane/gen_example_coprocessor.i_cvxif_coprocessor/i_copro_alu/result_n0__246_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000    28.252    i_ariane/gen_example_coprocessor.i_cvxif_coprocessor/i_copro_alu/result_n0__246_carry__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    28.369 r  i_ariane/gen_example_coprocessor.i_cvxif_coprocessor/i_copro_alu/result_n0__246_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000    28.369    i_ariane/gen_example_coprocessor.i_cvxif_coprocessor/i_copro_alu/result_n0__246_carry__1_n_0
+                         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.232    28.601 r  i_ariane/gen_example_coprocessor.i_cvxif_coprocessor/i_copro_alu/result_n0__246_carry__2/O[0]
+                         net (fo=1, unplaced)         0.741    29.342    i_ariane/i_cva6/id_stage_i/result_q_reg[31]_0[1]
+                         LUT6 (Prop_lut6_I0_O)        0.295    29.637 f  i_ariane/i_cva6/id_stage_i/result_q[12]_i_4/O
+                         net (fo=1, unplaced)         0.419    30.056    i_ariane/i_cva6/id_stage_i/result_q[12]_i_4_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124    30.180 r  i_ariane/i_cva6/id_stage_i/result_q[12]_i_1/O
+                         net (fo=1, unplaced)         0.000    30.180    i_ariane/gen_example_coprocessor.i_cvxif_coprocessor/i_copro_alu/result_q_reg[31]_1[12]
+                         FDCE                                         r  i_ariane/gen_example_coprocessor.i_cvxif_coprocessor/i_copro_alu/result_q_reg[12]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_xlnx_clk_gen rise edge)
@@ -128,16 +157,16 @@ Slack (MET) :             1.663ns  (required time - arrival time)
                                                      -5.378    21.466 r  i_xlnx_clk_gen/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, unplaced)         0.760    22.225    i_xlnx_clk_gen/inst/clk_out1_xlnx_clk_gen
                          BUFG (Prop_bufg_I_O)         0.091    22.316 r  i_xlnx_clk_gen/inst/clkout1_buf/O
-                         net (fo=16187, unplaced)     0.439    22.755    i_ariane/i_cva6/ex_stage_i/lsu_i/lsu_bypass_i/clk_out1
-                         FDCE                                         r  i_ariane/i_cva6/ex_stage_i/lsu_i/lsu_bypass_i/mem_q_reg[0][be][0]/C
+                         net (fo=16329, unplaced)     0.439    22.755    i_ariane/gen_example_coprocessor.i_cvxif_coprocessor/i_copro_alu/clk_out1
+                         FDCE                                         r  i_ariane/gen_example_coprocessor.i_cvxif_coprocessor/i_copro_alu/result_q_reg[12]/C
                          clock pessimism              0.531    23.286    
                          clock uncertainty           -0.082    23.204    
-                         FDCE (Setup_fdce_C_CE)      -0.202    23.002    i_ariane/i_cva6/ex_stage_i/lsu_i/lsu_bypass_i/mem_q_reg[0][be][0]
+                         FDCE (Setup_fdce_C_D)        0.044    23.248    i_ariane/gen_example_coprocessor.i_cvxif_coprocessor/i_copro_alu/result_q_reg[12]
   -------------------------------------------------------------------
-                         required time                         23.002    
-                         arrival time                         -21.339    
+                         required time                         23.248    
+                         arrival time                         -30.180    
   -------------------------------------------------------------------
-                         slack                                  1.663    
+                         slack                                 -6.932    
 
 Slack (MET) :             5.757ns  (required time - arrival time)
   Source:                 i_dmi_jtag/i_dmi_jtag_tap/td_o_reg/C
@@ -222,7 +251,7 @@ Slack (MET) :             22.007ns  (required time - arrival time)
                                                      -5.113    -3.054 r  i_xlnx_clk_gen/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, unplaced)         0.800    -2.254    i_xlnx_clk_gen/inst/clk_out1_xlnx_clk_gen
                          BUFG (Prop_bufg_I_O)         0.101    -2.153 r  i_xlnx_clk_gen/inst/clkout1_buf/O
-                         net (fo=16187, unplaced)     0.584    -1.569    i_axi_dwidth_converter_dm_slave/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/clk
+                         net (fo=16329, unplaced)     0.584    -1.569    i_axi_dwidth_converter_dm_slave/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/clk
                          FDRE                                         r  i_axi_dwidth_converter_dm_slave/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gcc_rst.sckt_wr_rst_cc_reg[1]/C
   -------------------------------------------------------------------    -------------------
                          FDRE (Prop_fdre_C_Q)         0.478    -1.091 f  i_axi_dwidth_converter_dm_slave/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gcc_rst.sckt_wr_rst_cc_reg[1]/Q
@@ -242,7 +271,7 @@ Slack (MET) :             22.007ns  (required time - arrival time)
                                                      -5.378    21.466 r  i_xlnx_clk_gen/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, unplaced)         0.760    22.225    i_xlnx_clk_gen/inst/clk_out1_xlnx_clk_gen
                          BUFG (Prop_bufg_I_O)         0.091    22.316 r  i_xlnx_clk_gen/inst/clkout1_buf/O
-                         net (fo=16187, unplaced)     0.439    22.755    i_axi_dwidth_converter_dm_slave/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/clk
+                         net (fo=16329, unplaced)     0.439    22.755    i_axi_dwidth_converter_dm_slave/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/clk
                          FDPE                                         r  i_axi_dwidth_converter_dm_slave/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_fb_i_reg/C
                          clock pessimism              0.531    23.286    
                          clock uncertainty           -0.082    23.204    

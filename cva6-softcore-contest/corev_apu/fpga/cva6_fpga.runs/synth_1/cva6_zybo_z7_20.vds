@@ -3,16 +3,16 @@
 # SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Mon Apr 20 20:07:08 2026
-# Process ID: 10618
+# Start of session at: Fri May  1 13:47:31 2026
+# Process ID: 185469
 # Current directory: /home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/cva6_fpga.runs/synth_1
 # Command line: vivado -log cva6_zybo_z7_20.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cva6_zybo_z7_20.tcl
 # Log file: /home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/cva6_fpga.runs/synth_1/cva6_zybo_z7_20.vds
 # Journal file: /home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/cva6_fpga.runs/synth_1/vivado.jou
-# Running On: kador, OS: Linux, CPU Frequency: 598.096 MHz, CPU Physical cores: 14, Host memory: 33322 MB
+# Running On: kador, OS: Linux, CPU Frequency: 1073.224 MHz, CPU Physical cores: 14, Host memory: 33322 MB
 #-----------------------------------------------------------
 source cva6_zybo_z7_20.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1369.637 ; gain = 141.805 ; free physical = 24458 ; free virtual = 26784
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1367.180 ; gain = 138.836 ; free physical = 25787 ; free virtual = 27246
 Command: synth_design -top cva6_zybo_z7_20 -part xc7z020clg400-1 -global_retiming on
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
@@ -20,15 +20,15 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 10899
+INFO: [Synth 8-7075] Helper process launched with PID 185568
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2142.688 ; gain = 403.648 ; free physical = 22915 ; free virtual = 25596
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2143.230 ; gain = 404.648 ; free physical = 24652 ; free virtual = 26199
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-9535] ignoring re-definition of command line macro 'BRAM' [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/src/zybo-z7-20.svh:18]
-WARNING: [Synth 8-11067] parameter 'NbInstr' declared inside package 'cvxif_instr_pkg' shall be treated as localparam [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cvxif_example/include/cvxif_instr_pkg.sv:55]
-WARNING: [Synth 8-11067] parameter 'CoproInstr' declared inside package 'cvxif_instr_pkg' shall be treated as localparam [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cvxif_example/include/cvxif_instr_pkg.sv:56]
-WARNING: [Synth 8-11067] parameter 'NbCompInstr' declared inside package 'cvxif_instr_pkg' shall be treated as localparam [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cvxif_example/include/cvxif_instr_pkg.sv:139]
-WARNING: [Synth 8-11067] parameter 'CoproCompInstr' declared inside package 'cvxif_instr_pkg' shall be treated as localparam [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cvxif_example/include/cvxif_instr_pkg.sv:140]
+WARNING: [Synth 8-11067] parameter 'NbInstr' declared inside package 'cvxif_instr_pkg' shall be treated as localparam [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cvxif_example/include/cvxif_instr_pkg.sv:62]
+WARNING: [Synth 8-11067] parameter 'CoproInstr' declared inside package 'cvxif_instr_pkg' shall be treated as localparam [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cvxif_example/include/cvxif_instr_pkg.sv:63]
+WARNING: [Synth 8-11067] parameter 'NbCompInstr' declared inside package 'cvxif_instr_pkg' shall be treated as localparam [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cvxif_example/include/cvxif_instr_pkg.sv:202]
+WARNING: [Synth 8-11067] parameter 'CoproCompInstr' declared inside package 'cvxif_instr_pkg' shall be treated as localparam [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cvxif_example/include/cvxif_instr_pkg.sv:203]
 INFO: [Synth 8-11241] undeclared symbol 'dout', assumed default net type 'wire' [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/src/ariane-ethernet/dualmem_widen8.sv:88]
 WARNING: [Synth 8-11065] parameter 'NR_BYPASS_PORTS' becomes localparam in 'miss_handler' with formal parameter declaration list [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cache_subsystem/miss_handler.sv:72]
 WARNING: [Synth 8-11065] parameter 'STYLE_INT' becomes localparam in 'rgmii_lfsr' with formal parameter declaration list [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/src/ariane-ethernet/rgmii_lfsr.sv:364]
@@ -103,8 +103,8 @@ INFO: [Synth 8-6157] synthesizing module 'AXI_BUS' [/home/pr_se_2324/LumiEirb_ne
 	Parameter AXI_ID_WIDTH bound to: 5 - type: integer 
 	Parameter AXI_USER_WIDTH bound to: 32 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'AXI_BUS' (0#1) [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/tb/axi_intf.sv:19]
-INFO: [Synth 8-6157] synthesizing module 'xlnx_axi_dwidth_converter_dm_slave' [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/cva6_fpga.runs/synth_1/.Xil/Vivado-10618-kador/realtime/xlnx_axi_dwidth_converter_dm_slave_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'xlnx_axi_dwidth_converter_dm_slave' (0#1) [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/cva6_fpga.runs/synth_1/.Xil/Vivado-10618-kador/realtime/xlnx_axi_dwidth_converter_dm_slave_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'xlnx_axi_dwidth_converter_dm_slave' [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/cva6_fpga.runs/synth_1/.Xil/Vivado-185469-kador/realtime/xlnx_axi_dwidth_converter_dm_slave_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'xlnx_axi_dwidth_converter_dm_slave' (0#1) [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/cva6_fpga.runs/synth_1/.Xil/Vivado-185469-kador/realtime/xlnx_axi_dwidth_converter_dm_slave_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'AXI_BUS' [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/tb/axi_intf.sv:19]
 	Parameter AXI_ADDR_WIDTH bound to: 64 - type: integer 
 	Parameter AXI_DATA_WIDTH bound to: 64 - type: integer 
@@ -117,8 +117,8 @@ INFO: [Synth 8-6157] synthesizing module 'AXI_BUS' [/home/pr_se_2324/LumiEirb_ne
 	Parameter AXI_ID_WIDTH bound to: 4 - type: integer 
 	Parameter AXI_USER_WIDTH bound to: 32 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'AXI_BUS' (0#1) [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/tb/axi_intf.sv:19]
-INFO: [Synth 8-6157] synthesizing module 'xlnx_axi_dwidth_converter_dm_master' [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/cva6_fpga.runs/synth_1/.Xil/Vivado-10618-kador/realtime/xlnx_axi_dwidth_converter_dm_master_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'xlnx_axi_dwidth_converter_dm_master' (0#1) [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/cva6_fpga.runs/synth_1/.Xil/Vivado-10618-kador/realtime/xlnx_axi_dwidth_converter_dm_master_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'xlnx_axi_dwidth_converter_dm_master' [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/cva6_fpga.runs/synth_1/.Xil/Vivado-185469-kador/realtime/xlnx_axi_dwidth_converter_dm_master_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'xlnx_axi_dwidth_converter_dm_master' (0#1) [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/cva6_fpga.runs/synth_1/.Xil/Vivado-185469-kador/realtime/xlnx_axi_dwidth_converter_dm_master_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'bootrom_32' [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/src/bootrom/bootrom_32.sv:17]
 INFO: [Synth 8-6155] done synthesizing module 'bootrom_32' (0#1) [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/src/bootrom/bootrom_32.sv:17]
 INFO: [Synth 8-6157] synthesizing module 'rstgen' [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/vendor/pulp-platform/common_cells/src/rstgen.sv:13]
@@ -466,7 +466,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_adapter' [/home/pr_se_2324/LumiEir
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -480,7 +480,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_adapter' [/home/pr_se_2324/LumiEir
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -826,7 +826,7 @@ INFO: [Synth 8-6157] synthesizing module 'ariane' [/home/pr_se_2324/LumiEirb_new
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -840,7 +840,7 @@ INFO: [Synth 8-6157] synthesizing module 'ariane' [/home/pr_se_2324/LumiEirb_new
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -1142,6 +1142,23 @@ INFO: [Synth 8-6157] synthesizing module 'ariane' [/home/pr_se_2324/LumiEirb_new
 	Parameter CVA6Cfg[X_DUALREAD] bound to: 32'b00000000000000000000000000000000 
 	Parameter CVA6Cfg[X_DUALWRITE] bound to: 32'b00000000000000000000000000000000 
 	Parameter CVA6Cfg[X_ISSUE_REGISTER_SPLIT] bound to: 32'b00000000000000000000000000000000 
+INFO: [Synth 8-6157] synthesizing module 'cvxif_example_coprocessor' [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cvxif_example/cvxif_example_coprocessor.sv:10]
+	Parameter NrRgprPorts bound to: 32'b00000000000000000000000000000010 
+	Parameter XLEN bound to: 32'b00000000000000000000000000100000 
+INFO: [Synth 8-6157] synthesizing module 'compressed_instr_decoder' [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cvxif_example/compressed_instr_decoder.sv:10]
+	Parameter NbInstr bound to: 32'sb00000000000000000000000000000010 
+	Parameter CoproInstr bound to: 130'b1110000000000000111100000000001110000000000000000000000000111101111110000000000001111000000000011100000000000000000001000001111011 
+INFO: [Synth 8-6155] done synthesizing module 'compressed_instr_decoder' (0#1) [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cvxif_example/compressed_instr_decoder.sv:10]
+INFO: [Synth 8-6157] synthesizing module 'instr_decoder' [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cvxif_example/instr_decoder.sv:10]
+	Parameter NbInstr bound to: 32'sb00000000000000000000000000001111 
+	Parameter CoproInstr bound to: 1095'b000000000000000000000000011110111111111000000000011100000111111110000000100000000000000000001000001111011111111100000000001110000011111111101100100000001000000000000100000111101111111110000000000111000001111111110010011000001000000000000010000011110111111111000000000011100000111111111010010000000000000000000000000001000011000001100000000001110000011111111111101100000000000000000000000000100011100000110000000000111000001111111111110111000000000000000000000000010010110000011000000000011100000111111111111100100000000000000000000000001001111000001100000000001110000011111111111110000001000000000000000100000111101111111110000000000111000001111111110011010000110000000000000010000011110111111111000000000011100000111111111011101100100000000000000001000001111011111111100000000001110000011111111101111000010100000000000000100000111101111111110000000000111000001111111110111101010100000000000000010000011110111111111000000000011100000111111110001010101011000000000000001000001111011111111100000000001110000011111111101111100011100000000000000100000111101111111110000000000111000001111111110001111 
+	Parameter NrRgprPorts bound to: 32'b00000000000000000000000000000010 
+INFO: [Synth 8-6155] done synthesizing module 'instr_decoder' (0#1) [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cvxif_example/instr_decoder.sv:10]
+INFO: [Synth 8-6157] synthesizing module 'copro_alu' [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cvxif_example/copro_alu.sv:10]
+	Parameter NrRgprPorts bound to: 32'b00000000000000000000000000000010 
+	Parameter XLEN bound to: 32'b00000000000000000000000000100000 
+INFO: [Synth 8-6155] done synthesizing module 'copro_alu' (0#1) [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cvxif_example/copro_alu.sv:10]
+INFO: [Synth 8-6155] done synthesizing module 'cvxif_example_coprocessor' (0#1) [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cvxif_example/cvxif_example_coprocessor.sv:10]
 INFO: [Synth 8-6157] synthesizing module 'cva6' [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cva6.sv:18]
 	Parameter CVA6Cfg[XLEN] bound to: 32'b00000000000000000000000000100000 
 	Parameter CVA6Cfg[VLEN] bound to: 32'b00000000000000000000000000100000 
@@ -1182,7 +1199,7 @@ INFO: [Synth 8-6157] synthesizing module 'cva6' [/home/pr_se_2324/LumiEirb_new/c
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -1196,7 +1213,7 @@ INFO: [Synth 8-6157] synthesizing module 'cva6' [/home/pr_se_2324/LumiEirb_new/c
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -1538,7 +1555,7 @@ INFO: [Synth 8-6157] synthesizing module 'cva6_hpdcache_subsystem' [/home/pr_se_
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -1552,7 +1569,7 @@ INFO: [Synth 8-6157] synthesizing module 'cva6_hpdcache_subsystem' [/home/pr_se_
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -1895,7 +1912,7 @@ INFO: [Synth 8-6157] synthesizing module 'cva6_icache' [/home/pr_se_2324/LumiEir
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -1909,7 +1926,7 @@ INFO: [Synth 8-6157] synthesizing module 'cva6_icache' [/home/pr_se_2324/LumiEir
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -2255,11 +2272,11 @@ INFO: [Synth 8-6155] done synthesizing module 'sram__parameterized0' (0#1) [/hom
 INFO: [Synth 8-6155] done synthesizing module 'sram_cache__parameterized0' (0#1) [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/common/local/util/sram_cache.sv:21]
 INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cache_subsystem/cva6_icache.sv:220]
 INFO: [Synth 8-6157] synthesizing module 'lfsr' [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/vendor/pulp-platform/common_cells/src/lfsr.sv:22]
+INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 	Parameter LfsrWidth bound to: 32'b00000000000000000000000000001000 
 	Parameter OutWidth bound to: 32'b00000000000000000000000000000001 
 INFO: [Synth 8-6155] done synthesizing module 'lfsr' (0#1) [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/vendor/pulp-platform/common_cells/src/lfsr.sv:22]
 INFO: [Synth 8-6155] done synthesizing module 'cva6_icache' (0#1) [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cache_subsystem/cva6_icache.sv:28]
-INFO: [Synth 8-6157] synthesizing module 'cva6_hpdcache_wrapper' [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cache_subsystem/cva6_hpdcache_wrapper.sv:15]
 	Parameter CVA6Cfg[XLEN] bound to: 32'b00000000000000000000000000100000 
 	Parameter CVA6Cfg[VLEN] bound to: 32'b00000000000000000000000000100000 
 	Parameter CVA6Cfg[PLEN] bound to: 32'b00000000000000000000000000100010 
@@ -2299,7 +2316,7 @@ INFO: [Synth 8-6157] synthesizing module 'cva6_hpdcache_wrapper' [/home/pr_se_23
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -2313,7 +2330,7 @@ INFO: [Synth 8-6157] synthesizing module 'cva6_hpdcache_wrapper' [/home/pr_se_23
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -2669,7 +2686,6 @@ INFO: [Synth 8-6157] synthesizing module 'cva6_hpdcache_wrapper' [/home/pr_se_23
 	Parameter HPDcacheCfg[accessWidth] bound to: 32'b00000000000000000000000001000000 
 	Parameter NumPorts bound to: 4 - type: integer 
 	Parameter NrHwPrefetchers bound to: 32'sb00000000000000000000000000000100 
-INFO: [Synth 8-6157] synthesizing module 'cva6_hpdcache_if_adapter' [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cache_subsystem/cva6_hpdcache_if_adapter.sv:12]
 	Parameter CVA6Cfg[XLEN] bound to: 32'b00000000000000000000000000100000 
 	Parameter CVA6Cfg[VLEN] bound to: 32'b00000000000000000000000000100000 
 	Parameter CVA6Cfg[PLEN] bound to: 32'b00000000000000000000000000100010 
@@ -2709,7 +2725,7 @@ INFO: [Synth 8-6157] synthesizing module 'cva6_hpdcache_if_adapter' [/home/pr_se
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -2723,7 +2739,7 @@ INFO: [Synth 8-6157] synthesizing module 'cva6_hpdcache_if_adapter' [/home/pr_se
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -3080,7 +3096,6 @@ INFO: [Synth 8-6157] synthesizing module 'cva6_hpdcache_if_adapter' [/home/pr_se
 	Parameter InvalidateOnFlush bound to: 1'b0 
 	Parameter IsLoadPort bound to: 1'b1 
 INFO: [Synth 8-6155] done synthesizing module 'cva6_hpdcache_if_adapter' (0#1) [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cache_subsystem/cva6_hpdcache_if_adapter.sv:12]
-INFO: [Synth 8-6157] synthesizing module 'cva6_hpdcache_if_adapter__parameterized0' [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cache_subsystem/cva6_hpdcache_if_adapter.sv:12]
 	Parameter CVA6Cfg[XLEN] bound to: 32'b00000000000000000000000000100000 
 	Parameter CVA6Cfg[VLEN] bound to: 32'b00000000000000000000000000100000 
 	Parameter CVA6Cfg[PLEN] bound to: 32'b00000000000000000000000000100010 
@@ -3120,7 +3135,7 @@ INFO: [Synth 8-6157] synthesizing module 'cva6_hpdcache_if_adapter__parameterize
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -3134,7 +3149,7 @@ INFO: [Synth 8-6157] synthesizing module 'cva6_hpdcache_if_adapter__parameterize
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -3492,8 +3507,6 @@ INFO: [Synth 8-6157] synthesizing module 'cva6_hpdcache_if_adapter__parameterize
 	Parameter IsLoadPort bound to: 1'b0 
 INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cache_subsystem/cva6_hpdcache_if_adapter.sv:194]
 INFO: [Synth 8-6155] done synthesizing module 'cva6_hpdcache_if_adapter__parameterized0' (0#1) [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cache_subsystem/cva6_hpdcache_if_adapter.sv:12]
-INFO: [Synth 8-6157] synthesizing module 'hwpf_stride_wrapper' [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cache_subsystem/hpdcache/rtl/src/hwpf_stride/hwpf_stride_wrapper.sv:28]
-INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 	Parameter HPDcacheCfg[u][nRequesters] bound to: 32'b00000000000000000000000000000110 
 	Parameter HPDcacheCfg[u][paWidth] bound to: 32'b00000000000000000000000000100010 
 	Parameter HPDcacheCfg[u][wordWidth] bound to: 32'b00000000000000000000000000100000 
@@ -3606,14 +3619,10 @@ INFO: [Synth 8-6155] done synthesizing module 'hwpf_stride' (0#1) [/home/pr_se_2
 	Parameter N bound to: 32'b00000000000000000000000000000100 
 	Parameter N bound to: 32'b00000000000000000000000000000100 
 INFO: [Synth 8-6155] done synthesizing module 'hpdcache_prio_1hot_encoder' (0#1) [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_prio_1hot_encoder.sv:26]
-INFO: [Synth 8-6155] done synthesizing module 'hpdcache_rrarb' (0#1) [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_rrarb.sv:28]
+INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 	Parameter NINPUT bound to: 32'b00000000000000000000000000000100 
 	Parameter DATA_WIDTH bound to: 32'b00000000000000000000000001011001 
 	Parameter ONE_HOT_SEL bound to: 1'b1 
-INFO: [Synth 8-6155] done synthesizing module 'hpdcache_mux' (0#1) [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_mux.sv:26]
-INFO: [Synth 8-6155] done synthesizing module 'hwpf_stride_arb' (0#1) [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cache_subsystem/hpdcache/rtl/src/hwpf_stride/hwpf_stride_arb.sv:26]
-INFO: [Synth 8-6155] done synthesizing module 'hwpf_stride_wrapper' (0#1) [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cache_subsystem/hpdcache/rtl/src/hwpf_stride/hwpf_stride_wrapper.sv:28]
-INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 	Parameter HPDcacheCfg[u][nRequesters] bound to: 32'b00000000000000000000000000000110 
 	Parameter HPDcacheCfg[u][paWidth] bound to: 32'b00000000000000000000000000100010 
 	Parameter HPDcacheCfg[u][wordWidth] bound to: 32'b00000000000000000000000000100000 
@@ -4410,7 +4419,7 @@ WARNING: [Synth 8-6104] Input port 'resp' has an internal driver [/home/pr_se_23
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -4424,7 +4433,7 @@ WARNING: [Synth 8-6104] Input port 'resp' has an internal driver [/home/pr_se_23
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -4788,7 +4797,7 @@ INFO: [Synth 8-155] case statement is not full and has no default [/home/pr_se_2
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -4802,7 +4811,7 @@ INFO: [Synth 8-155] case statement is not full and has no default [/home/pr_se_2
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -5143,7 +5152,7 @@ INFO: [Synth 8-155] case statement is not full and has no default [/home/pr_se_2
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -5157,7 +5166,7 @@ INFO: [Synth 8-155] case statement is not full and has no default [/home/pr_se_2
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -5499,7 +5508,7 @@ INFO: [Synth 8-155] case statement is not full and has no default [/home/pr_se_2
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -5513,7 +5522,7 @@ INFO: [Synth 8-155] case statement is not full and has no default [/home/pr_se_2
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -5861,7 +5870,7 @@ WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic 
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -5875,7 +5884,7 @@ WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic 
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -6220,7 +6229,7 @@ WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic 
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -6234,7 +6243,7 @@ WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic 
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -6575,7 +6584,7 @@ WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic 
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -6589,7 +6598,7 @@ WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic 
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -6932,7 +6941,7 @@ INFO: [Synth 8-294] found qualifier unique on case statement: implementing as pa
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -6946,7 +6955,7 @@ INFO: [Synth 8-294] found qualifier unique on case statement: implementing as pa
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -7302,7 +7311,7 @@ WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic 
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -7316,7 +7325,7 @@ WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic 
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -7667,7 +7676,7 @@ WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic 
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -7681,7 +7690,7 @@ WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic 
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -8000,6 +8009,7 @@ INFO: [Synth 8-294] found qualifier unique on case statement: implementing as pa
 INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/decoder.sv:1027]
 INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/decoder.sv:1048]
 WARNING: [Synth 8-693] zero replication count - replication ignored [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/decoder.sv:1506]
+WARNING: [Synth 8-693] zero replication count - replication ignored [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/decoder.sv:1586]
 WARNING: [Synth 8-693] zero replication count - replication ignored [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/decoder.sv:1588]
 	Parameter CVA6Cfg[XLEN] bound to: 32'b00000000000000000000000000100000 
 	Parameter CVA6Cfg[VLEN] bound to: 32'b00000000000000000000000000100000 
@@ -8040,7 +8050,7 @@ WARNING: [Synth 8-693] zero replication count - replication ignored [/home/pr_se
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -8054,7 +8064,7 @@ WARNING: [Synth 8-693] zero replication count - replication ignored [/home/pr_se
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -8395,7 +8405,7 @@ WARNING: [Synth 8-693] zero replication count - replication ignored [/home/pr_se
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -8409,7 +8419,7 @@ WARNING: [Synth 8-693] zero replication count - replication ignored [/home/pr_se
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -8750,7 +8760,7 @@ WARNING: [Synth 8-693] zero replication count - replication ignored [/home/pr_se
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -8764,7 +8774,7 @@ WARNING: [Synth 8-693] zero replication count - replication ignored [/home/pr_se
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -9070,7 +9080,7 @@ INFO: [Synth 8-294] found qualifier unique on case statement: implementing as pa
 	Parameter NumIn bound to: 32'b00000000000000000000000000000101 
 	Parameter ExtPrio bound to: 1'b1 
 	Parameter AxiVldRdy bound to: 1'b1 
-	Parameter NumIn bound to: 32'b00000000000000000000000000001000 
+	Parameter NumIn bound to: 32'b00000000000000000000000000001001 
 	Parameter DataWidth bound to: 32'b00000000000000000000000000100000 
 	Parameter ExtPrio bound to: 1'b1 
 	Parameter AxiVldRdy bound to: 1'b1 
@@ -9114,7 +9124,7 @@ WARNING: [Synth 8-693] zero replication count - replication ignored [/home/pr_se
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -9128,7 +9138,7 @@ WARNING: [Synth 8-693] zero replication count - replication ignored [/home/pr_se
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -9504,7 +9514,7 @@ WARNING: [Synth 8-11581] system function call 'random' not supported [/home/pr_s
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -9518,7 +9528,7 @@ WARNING: [Synth 8-11581] system function call 'random' not supported [/home/pr_s
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -9859,7 +9869,7 @@ WARNING: [Synth 8-11581] system function call 'random' not supported [/home/pr_s
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -9873,7 +9883,7 @@ WARNING: [Synth 8-11581] system function call 'random' not supported [/home/pr_s
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -10214,7 +10224,7 @@ WARNING: [Synth 8-11581] system function call 'random' not supported [/home/pr_s
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -10228,7 +10238,362 @@ WARNING: [Synth 8-11581] system function call 'random' not supported [/home/pr_s
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
+	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
+	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
+	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
+	Parameter CVA6Cfg[RVS] bound to: 1'b0 
+	Parameter CVA6Cfg[RVU] bound to: 1'b0 
+	Parameter CVA6Cfg[SoftwareInterruptEn] bound to: 1'b1 
+	Parameter CVA6Cfg[HaltAddress] bound to: 64'b0000000000000000000000000000000000000000000000000000100000000000 
+	Parameter CVA6Cfg[ExceptionAddress] bound to: 64'b0000000000000000000000000000000000000000000000000000100000001000 
+	Parameter CVA6Cfg[RASDepth] bound to: 32'b00000000000000000000000000000010 
+	Parameter CVA6Cfg[BTBEntries] bound to: 32'b00000000000000000000000000100000 
+	Parameter CVA6Cfg[BHTEntries] bound to: 32'b00000000000000000000000010000000 
+	Parameter CVA6Cfg[InstrTlbEntries] bound to: 32'b00000000000000000000000000000010 
+	Parameter CVA6Cfg[DataTlbEntries] bound to: 32'b00000000000000000000000000000010 
+	Parameter CVA6Cfg[UseSharedTlb] bound to: 1'b1 
+	Parameter CVA6Cfg[SharedTlbDepth] bound to: 32'b00000000000000000000000001000000 
+	Parameter CVA6Cfg[VpnLen] bound to: 32'b00000000000000000000000000010100 
+	Parameter CVA6Cfg[PtLevels] bound to: 32'b00000000000000000000000000000010 
+	Parameter CVA6Cfg[DmBaseAddress] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[TvalEn] bound to: 1'b1 
+	Parameter CVA6Cfg[DirectVecOnly] bound to: 1'b0 
+	Parameter CVA6Cfg[NrPMPEntries] bound to: 32'b00000000000000000000000000001000 
+	Parameter CVA6Cfg[PMPCfgRstVal][63] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][62] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][61] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][60] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][59] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][58] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][57] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][56] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][55] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][54] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][53] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][52] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][51] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][50] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][49] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][48] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][47] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][46] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][45] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][44] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][43] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][42] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][41] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][40] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][39] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][38] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][37] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][36] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][35] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][34] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][33] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][32] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][31] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][30] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][29] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][28] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][27] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][26] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][25] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][24] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][23] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][22] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][21] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][20] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][19] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][18] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][17] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][16] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][15] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][14] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][13] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][12] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][11] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][10] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][9] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][8] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][7] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][6] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][5] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][4] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][3] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][2] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][1] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPCfgRstVal][0] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][63] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][62] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][61] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][60] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][59] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][58] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][57] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][56] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][55] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][54] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][53] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][52] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][51] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][50] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][49] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][48] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][47] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][46] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][45] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][44] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][43] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][42] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][41] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][40] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][39] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][38] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][37] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][36] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][35] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][34] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][33] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][32] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][31] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][30] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][29] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][28] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][27] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][26] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][25] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][24] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][23] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][22] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][21] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][20] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][19] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][18] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][17] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][16] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][15] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][14] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][13] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][12] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][11] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][10] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][9] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][8] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][7] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][6] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][5] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][4] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][3] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][2] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][1] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPAddrRstVal][0] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPEntryReadOnly] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[PMPNapotEn] bound to: 1'b1 
+	Parameter CVA6Cfg[NOCType] bound to: 32'sb00000000000000000000000000000000 
+	Parameter CVA6Cfg[NrNonIdempotentRules] bound to: 32'b00000000000000000000000000000001 
+	Parameter CVA6Cfg[NonIdempotentAddrBase][15] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[NonIdempotentAddrBase][14] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[NonIdempotentAddrBase][13] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[NonIdempotentAddrBase][12] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[NonIdempotentAddrBase][11] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[NonIdempotentAddrBase][10] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[NonIdempotentAddrBase][9] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[NonIdempotentAddrBase][8] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[NonIdempotentAddrBase][7] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[NonIdempotentAddrBase][6] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[NonIdempotentAddrBase][5] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[NonIdempotentAddrBase][4] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[NonIdempotentAddrBase][3] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[NonIdempotentAddrBase][2] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[NonIdempotentAddrBase][1] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[NonIdempotentAddrBase][0] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[NonIdempotentLength][15] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[NonIdempotentLength][14] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[NonIdempotentLength][13] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[NonIdempotentLength][12] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[NonIdempotentLength][11] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[NonIdempotentLength][10] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[NonIdempotentLength][9] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[NonIdempotentLength][8] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[NonIdempotentLength][7] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[NonIdempotentLength][6] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[NonIdempotentLength][5] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[NonIdempotentLength][4] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[NonIdempotentLength][3] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[NonIdempotentLength][2] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[NonIdempotentLength][1] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[NonIdempotentLength][0] bound to: 64'b0000000000000000000000000000000010000000000000000000000000000000 
+	Parameter CVA6Cfg[NrExecuteRegionRules] bound to: 32'b00000000000000000000000000000011 
+	Parameter CVA6Cfg[ExecuteRegionAddrBase][15] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[ExecuteRegionAddrBase][14] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[ExecuteRegionAddrBase][13] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[ExecuteRegionAddrBase][12] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[ExecuteRegionAddrBase][11] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[ExecuteRegionAddrBase][10] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[ExecuteRegionAddrBase][9] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[ExecuteRegionAddrBase][8] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[ExecuteRegionAddrBase][7] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[ExecuteRegionAddrBase][6] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[ExecuteRegionAddrBase][5] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[ExecuteRegionAddrBase][4] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[ExecuteRegionAddrBase][3] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[ExecuteRegionAddrBase][2] bound to: 64'b0000000000000000000000000000000010000000000000000000000000000000 
+	Parameter CVA6Cfg[ExecuteRegionAddrBase][1] bound to: 64'b0000000000000000000000000000000000000000000000010000000000000000 
+	Parameter CVA6Cfg[ExecuteRegionAddrBase][0] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[ExecuteRegionLength][15] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[ExecuteRegionLength][14] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[ExecuteRegionLength][13] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[ExecuteRegionLength][12] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[ExecuteRegionLength][11] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[ExecuteRegionLength][10] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[ExecuteRegionLength][9] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[ExecuteRegionLength][8] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[ExecuteRegionLength][7] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[ExecuteRegionLength][6] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[ExecuteRegionLength][5] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[ExecuteRegionLength][4] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[ExecuteRegionLength][3] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[ExecuteRegionLength][2] bound to: 64'b0000000000000000000000000000000001000000000000000000000000000000 
+	Parameter CVA6Cfg[ExecuteRegionLength][1] bound to: 64'b0000000000000000000000000000000000000000000000010000000000000000 
+	Parameter CVA6Cfg[ExecuteRegionLength][0] bound to: 64'b0000000000000000000000000000000000000000000000000001000000000000 
+	Parameter CVA6Cfg[NrCachedRegionRules] bound to: 32'b00000000000000000000000000000001 
+	Parameter CVA6Cfg[CachedRegionAddrBase][15] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[CachedRegionAddrBase][14] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[CachedRegionAddrBase][13] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[CachedRegionAddrBase][12] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[CachedRegionAddrBase][11] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[CachedRegionAddrBase][10] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[CachedRegionAddrBase][9] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[CachedRegionAddrBase][8] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[CachedRegionAddrBase][7] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[CachedRegionAddrBase][6] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[CachedRegionAddrBase][5] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[CachedRegionAddrBase][4] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[CachedRegionAddrBase][3] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[CachedRegionAddrBase][2] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[CachedRegionAddrBase][1] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[CachedRegionAddrBase][0] bound to: 64'b0000000000000000000000000000000010000000000000000000000000000000 
+	Parameter CVA6Cfg[CachedRegionLength][15] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[CachedRegionLength][14] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[CachedRegionLength][13] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[CachedRegionLength][12] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[CachedRegionLength][11] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[CachedRegionLength][10] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[CachedRegionLength][9] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[CachedRegionLength][8] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[CachedRegionLength][7] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[CachedRegionLength][6] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[CachedRegionLength][5] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[CachedRegionLength][4] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[CachedRegionLength][3] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[CachedRegionLength][2] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[CachedRegionLength][1] bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter CVA6Cfg[CachedRegionLength][0] bound to: 64'b0000000000000000000000000000000001000000000000000000000000000000 
+	Parameter CVA6Cfg[MaxOutstandingStores] bound to: 32'b00000000000000000000000000000111 
+	Parameter CVA6Cfg[DebugEn] bound to: 1'b1 
+	Parameter CVA6Cfg[NonIdemPotenceEn] bound to: 1'b1 
+	Parameter CVA6Cfg[AxiBurstWriteEn] bound to: 1'b0 
+	Parameter CVA6Cfg[ICACHE_SET_ASSOC] bound to: 32'b00000000000000000000000000000010 
+	Parameter CVA6Cfg[ICACHE_SET_ASSOC_WIDTH] bound to: 32'b00000000000000000000000000000001 
+	Parameter CVA6Cfg[ICACHE_INDEX_WIDTH] bound to: 32'b00000000000000000000000000001100 
+	Parameter CVA6Cfg[ICACHE_TAG_WIDTH] bound to: 32'b00000000000000000000000000010110 
+	Parameter CVA6Cfg[ICACHE_LINE_WIDTH] bound to: 32'b00000000000000000000000010000000 
+	Parameter CVA6Cfg[ICACHE_USER_LINE_WIDTH] bound to: 32'b00000000000000000000000010000000 
+	Parameter CVA6Cfg[DCacheType] bound to: 3'b010 
+	Parameter CVA6Cfg[DcacheIdWidth] bound to: 32'b00000000000000000000000000000001 
+	Parameter CVA6Cfg[DCACHE_SET_ASSOC] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[DCACHE_SET_ASSOC_WIDTH] bound to: 32'b00000000000000000000000000000010 
+	Parameter CVA6Cfg[DCACHE_INDEX_WIDTH] bound to: 32'b00000000000000000000000000001100 
+	Parameter CVA6Cfg[DCACHE_TAG_WIDTH] bound to: 32'b00000000000000000000000000010110 
+	Parameter CVA6Cfg[DCACHE_LINE_WIDTH] bound to: 32'b00000000000000000000000010000000 
+	Parameter CVA6Cfg[DCACHE_USER_LINE_WIDTH] bound to: 32'b00000000000000000000000010000000 
+	Parameter CVA6Cfg[DCACHE_USER_WIDTH] bound to: 32'b00000000000000000000000000100000 
+	Parameter CVA6Cfg[DCACHE_OFFSET_WIDTH] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[DCACHE_NUM_WORDS] bound to: 32'b00000000000000000000000100000000 
+	Parameter CVA6Cfg[DCACHE_MAX_TX] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[DcacheFlushOnFence] bound to: 1'b0 
+	Parameter CVA6Cfg[DcacheInvalidateOnFlush] bound to: 1'b0 
+	Parameter CVA6Cfg[DATA_USER_EN] bound to: 32'b00000000000000000000000000000000 
+	Parameter CVA6Cfg[WtDcacheWbufDepth] bound to: 32'b00000000000000000000000000000010 
+	Parameter CVA6Cfg[FETCH_USER_WIDTH] bound to: 32'b00000000000000000000000000100000 
+	Parameter CVA6Cfg[FETCH_USER_EN] bound to: 32'b00000000000000000000000000000000 
+	Parameter CVA6Cfg[AXI_USER_EN] bound to: 1'b0 
+	Parameter CVA6Cfg[FETCH_WIDTH] bound to: 32'b00000000000000000000000000100000 
+	Parameter CVA6Cfg[FETCH_ALIGN_BITS] bound to: 32'b00000000000000000000000000000010 
+	Parameter CVA6Cfg[INSTR_PER_FETCH] bound to: 32'b00000000000000000000000000000001 
+	Parameter CVA6Cfg[LOG2_INSTR_PER_FETCH] bound to: 32'b00000000000000000000000000000001 
+	Parameter CVA6Cfg[ModeW] bound to: 32'b00000000000000000000000000000001 
+	Parameter CVA6Cfg[ASIDW] bound to: 32'b00000000000000000000000000001001 
+	Parameter CVA6Cfg[VMIDW] bound to: 32'b00000000000000000000000000000111 
+	Parameter CVA6Cfg[PPNW] bound to: 32'b00000000000000000000000000010110 
+	Parameter CVA6Cfg[GPPNW] bound to: 32'b00000000000000000000000000010110 
+	Parameter CVA6Cfg[MODE_SV] bound to: 4'b0001 
+	Parameter CVA6Cfg[SV] bound to: 32'b00000000000000000000000000100000 
+	Parameter CVA6Cfg[SVX] bound to: 32'b00000000000000000000000000100010 
+	Parameter CVA6Cfg[X_NUM_RS] bound to: 32'b00000000000000000000000000000010 
+	Parameter CVA6Cfg[X_ID_WIDTH] bound to: 32'b00000000000000000000000000000010 
+	Parameter CVA6Cfg[X_RFR_WIDTH] bound to: 32'b00000000000000000000000000100000 
+	Parameter CVA6Cfg[X_RFW_WIDTH] bound to: 32'b00000000000000000000000000100000 
+	Parameter CVA6Cfg[X_NUM_HARTS] bound to: 32'b00000000000000000000000000000001 
+	Parameter CVA6Cfg[X_HARTID_WIDTH] bound to: 32'b00000000000000000000000000100000 
+	Parameter CVA6Cfg[X_DUALREAD] bound to: 32'b00000000000000000000000000000000 
+	Parameter CVA6Cfg[X_DUALWRITE] bound to: 32'b00000000000000000000000000000000 
+	Parameter CVA6Cfg[X_ISSUE_REGISTER_SPLIT] bound to: 32'b00000000000000000000000000000000 
+	Parameter CVA6Cfg[XLEN] bound to: 32'b00000000000000000000000000100000 
+	Parameter CVA6Cfg[VLEN] bound to: 32'b00000000000000000000000000100000 
+	Parameter CVA6Cfg[PLEN] bound to: 32'b00000000000000000000000000100010 
+	Parameter CVA6Cfg[GPLEN] bound to: 32'b00000000000000000000000000100010 
+	Parameter CVA6Cfg[IS_XLEN32] bound to: 1'b1 
+	Parameter CVA6Cfg[IS_XLEN64] bound to: 1'b0 
+	Parameter CVA6Cfg[XLEN_ALIGN_BYTES] bound to: 32'b00000000000000000000000000000010 
+	Parameter CVA6Cfg[ASID_WIDTH] bound to: 32'b00000000000000000000000000000001 
+	Parameter CVA6Cfg[VMID_WIDTH] bound to: 32'b00000000000000000000000000000001 
+	Parameter CVA6Cfg[FpgaEn] bound to: 1'b1 
+	Parameter CVA6Cfg[FpgaAlteraEn] bound to: 1'b0 
+	Parameter CVA6Cfg[TechnoCut] bound to: 1'b0 
+	Parameter CVA6Cfg[SuperscalarEn] bound to: 1'b0 
+	Parameter CVA6Cfg[NrCommitPorts] bound to: 32'b00000000000000000000000000000001 
+	Parameter CVA6Cfg[NrIssuePorts] bound to: 32'b00000000000000000000000000000001 
+	Parameter CVA6Cfg[SpeculativeSb] bound to: 1'b0 
+	Parameter CVA6Cfg[NrLoadPipeRegs] bound to: 32'b00000000000000000000000000000001 
+	Parameter CVA6Cfg[NrStorePipeRegs] bound to: 32'b00000000000000000000000000000000 
+	Parameter CVA6Cfg[AxiAddrWidth] bound to: 32'b00000000000000000000000001000000 
+	Parameter CVA6Cfg[AxiDataWidth] bound to: 32'b00000000000000000000000001000000 
+	Parameter CVA6Cfg[AxiIdWidth] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[AxiUserWidth] bound to: 32'b00000000000000000000000000100000 
+	Parameter CVA6Cfg[MEM_TID_WIDTH] bound to: 32'b00000000000000000000000000000010 
+	Parameter CVA6Cfg[NrLoadBufEntries] bound to: 32'b00000000000000000000000000000001 
+	Parameter CVA6Cfg[RVF] bound to: 1'b0 
+	Parameter CVA6Cfg[RVD] bound to: 1'b0 
+	Parameter CVA6Cfg[XF16] bound to: 1'b0 
+	Parameter CVA6Cfg[XF16ALT] bound to: 1'b0 
+	Parameter CVA6Cfg[XF8] bound to: 1'b0 
+	Parameter CVA6Cfg[RVA] bound to: 1'b0 
+	Parameter CVA6Cfg[RVB] bound to: 1'b0 
+	Parameter CVA6Cfg[ZKN] bound to: 1'b1 
+	Parameter CVA6Cfg[RVV] bound to: 1'b0 
+	Parameter CVA6Cfg[RVC] bound to: 1'b0 
+	Parameter CVA6Cfg[RVH] bound to: 1'b0 
+	Parameter CVA6Cfg[RVZCB] bound to: 1'b0 
+	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
+	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
+	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
+	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
+	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
+	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
+	Parameter CVA6Cfg[NR_SB_ENTRIES] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[TRANS_ID_BITS] bound to: 32'b00000000000000000000000000000010 
+	Parameter CVA6Cfg[FpPresent] bound to: 1'b0 
+	Parameter CVA6Cfg[NSX] bound to: 1'b0 
+	Parameter CVA6Cfg[FLen] bound to: 32'b00000000000000000000000000000001 
+	Parameter CVA6Cfg[RVFVec] bound to: 1'b0 
+	Parameter CVA6Cfg[XF16Vec] bound to: 1'b0 
+	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
+	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
+	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -10571,7 +10936,7 @@ INFO: [Synth 8-294] found qualifier unique on case statement: implementing as pa
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -10585,7 +10950,7 @@ INFO: [Synth 8-294] found qualifier unique on case statement: implementing as pa
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -10928,7 +11293,7 @@ WARNING: [Synth 8-693] zero replication count - replication ignored [/home/pr_se
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -10942,7 +11307,7 @@ WARNING: [Synth 8-693] zero replication count - replication ignored [/home/pr_se
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -11284,7 +11649,7 @@ WARNING: [Synth 8-693] zero replication count - replication ignored [/home/pr_se
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -11298,7 +11663,7 @@ WARNING: [Synth 8-693] zero replication count - replication ignored [/home/pr_se
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -11639,7 +12004,7 @@ WARNING: [Synth 8-693] zero replication count - replication ignored [/home/pr_se
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -11653,7 +12018,7 @@ WARNING: [Synth 8-693] zero replication count - replication ignored [/home/pr_se
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -11995,7 +12360,7 @@ INFO: [Synth 8-294] found qualifier unique on case statement: implementing as pa
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -12009,7 +12374,7 @@ INFO: [Synth 8-294] found qualifier unique on case statement: implementing as pa
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -12354,7 +12719,7 @@ INFO: [Synth 8-294] found qualifier unique on case statement: implementing as pa
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -12368,7 +12733,7 @@ INFO: [Synth 8-294] found qualifier unique on case statement: implementing as pa
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -12709,7 +13074,7 @@ INFO: [Synth 8-294] found qualifier unique on case statement: implementing as pa
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -12723,7 +13088,7 @@ INFO: [Synth 8-294] found qualifier unique on case statement: implementing as pa
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -13064,7 +13429,7 @@ INFO: [Synth 8-294] found qualifier unique on case statement: implementing as pa
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -13078,7 +13443,7 @@ INFO: [Synth 8-294] found qualifier unique on case statement: implementing as pa
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -13419,7 +13784,7 @@ INFO: [Synth 8-294] found qualifier unique on case statement: implementing as pa
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -13433,7 +13798,7 @@ INFO: [Synth 8-294] found qualifier unique on case statement: implementing as pa
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -13776,7 +14141,7 @@ INFO: [Synth 8-294] found qualifier unique on case statement: implementing as pa
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -13790,7 +14155,7 @@ INFO: [Synth 8-294] found qualifier unique on case statement: implementing as pa
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -14131,7 +14496,7 @@ INFO: [Synth 8-294] found qualifier unique on case statement: implementing as pa
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -14145,7 +14510,7 @@ INFO: [Synth 8-294] found qualifier unique on case statement: implementing as pa
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -14486,7 +14851,7 @@ INFO: [Synth 8-294] found qualifier unique on case statement: implementing as pa
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -14500,7 +14865,7 @@ INFO: [Synth 8-294] found qualifier unique on case statement: implementing as pa
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -14848,7 +15213,7 @@ WARNING: [Synth 8-693] zero replication count - replication ignored [/home/pr_se
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -14862,7 +15227,7 @@ WARNING: [Synth 8-693] zero replication count - replication ignored [/home/pr_se
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -15203,7 +15568,7 @@ WARNING: [Synth 8-693] zero replication count - replication ignored [/home/pr_se
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -15217,7 +15582,7 @@ WARNING: [Synth 8-693] zero replication count - replication ignored [/home/pr_se
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -15558,7 +15923,7 @@ WARNING: [Synth 8-693] zero replication count - replication ignored [/home/pr_se
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -15572,7 +15937,7 @@ WARNING: [Synth 8-693] zero replication count - replication ignored [/home/pr_se
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -15929,7 +16294,7 @@ INFO: [Synth 8-294] found qualifier unique on case statement: implementing as pa
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -15943,7 +16308,7 @@ INFO: [Synth 8-294] found qualifier unique on case statement: implementing as pa
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -16284,7 +16649,7 @@ INFO: [Synth 8-294] found qualifier unique on case statement: implementing as pa
 	Parameter CVA6Cfg[RVZCMP] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZCMT] bound to: 1'b0 
 	Parameter CVA6Cfg[XFVec] bound to: 1'b0 
-	Parameter CVA6Cfg[CvxifEn] bound to: 1'b0 
+	Parameter CVA6Cfg[CvxifEn] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZiCond] bound to: 1'b0 
 	Parameter CVA6Cfg[RVZicntr] bound to: 1'b1 
 	Parameter CVA6Cfg[RVZihpm] bound to: 1'b1 
@@ -16298,7 +16663,7 @@ INFO: [Synth 8-294] found qualifier unique on case statement: implementing as pa
 	Parameter CVA6Cfg[XF16ALTVec] bound to: 1'b0 
 	Parameter CVA6Cfg[XF8Vec] bound to: 1'b0 
 	Parameter CVA6Cfg[NrRgprPorts] bound to: 32'b00000000000000000000000000000010 
-	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000100 
+	Parameter CVA6Cfg[NrWbPorts] bound to: 32'b00000000000000000000000000000101 
 	Parameter CVA6Cfg[EnableAccelerator] bound to: 1'b0 
 	Parameter CVA6Cfg[PerfCounterEn] bound to: 1'b0 
 	Parameter CVA6Cfg[MmuPresent] bound to: 1'b0 
@@ -16924,6 +17289,9 @@ WARNING: [Synth 8-6014] Unused sequential element mem_block_sel_q_reg[3] was rem
 WARNING: [Synth 8-6014] Unused sequential element mem_block_sel_q_reg[2] was removed.  [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/ariane_regfile_fpga.sv:96]
 WARNING: [Synth 8-6014] Unused sequential element mem_block_sel_q_reg[1] was removed.  [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/ariane_regfile_fpga.sv:96]
 WARNING: [Synth 8-6014] Unused sequential element mem_block_sel_q_reg[0] was removed.  [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/ariane_regfile_fpga.sv:96]
+WARNING: [Synth 8-3848] Net x_exception_o[tval2] in module/entity cvxif_fu does not have driver. [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cvxif_fu.sv:38]
+WARNING: [Synth 8-3848] Net x_exception_o[tinst] in module/entity cvxif_fu does not have driver. [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cvxif_fu.sv:38]
+WARNING: [Synth 8-3848] Net x_exception_o[gva] in module/entity cvxif_fu does not have driver. [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/cvxif_fu.sv:38]
 WARNING: [Synth 8-3848] Net clmul_q in module/entity multiplier does not have driver. [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/multiplier.sv:46]
 WARNING: [Synth 8-3848] Net clmulr_q in module/entity multiplier does not have driver. [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/multiplier.sv:46]
 WARNING: [Synth 8-6014] Unused sequential element word_op_q_reg was removed.  [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/mult.sv:153]
@@ -16932,9 +17300,6 @@ WARNING: [Synth 8-3848] Net req_port_o[data_wuser] in module/entity load_unit do
 WARNING: [Synth 8-3848] Net csr_hs_ld_st_inst_o in module/entity load_store_unit does not have driver. [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/load_store_unit.sv:99]
 WARNING: [Synth 8-3848] Net dcache_req_ports_o[0][data_wuser] in module/entity load_store_unit does not have driver. [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/load_store_unit.sv:140]
 WARNING: [Synth 8-3848] Net dcache_req_ports_o[0][data_id] in module/entity load_store_unit does not have driver. [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/load_store_unit.sv:140]
-WARNING: [Synth 8-3848] Net x_ready_o in module/entity ex_stage does not have driver. [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/ex_stage.sv:141]
-WARNING: [Synth 8-3848] Net x_we_o in module/entity ex_stage does not have driver. [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/ex_stage.sv:153]
-WARNING: [Synth 8-3848] Net x_rd_o in module/entity ex_stage does not have driver. [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/ex_stage.sv:155]
 WARNING: [Synth 8-6014] Unused sequential element fcsr_q_reg[reserved] was removed.  [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/csr_regfile.sv:2465]
 WARNING: [Synth 8-6014] Unused sequential element acc_cons_q_reg was removed.  [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/csr_regfile.sv:2569]
 WARNING: [Synth 8-6014] Unused sequential element mstatus_q_reg[wpri4] was removed.  [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/csr_regfile.sv:2236]
@@ -17076,18 +17441,18 @@ WARNING: [Synth 8-7129] Port gpio\.r_data[58] in module ariane_peripherals is ei
 WARNING: [Synth 8-7129] Port gpio\.r_data[57] in module ariane_peripherals is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2637.617 ; gain = 898.578 ; free physical = 22189 ; free virtual = 24933
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2650.160 ; gain = 911.578 ; free physical = 24116 ; free virtual = 25685
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2640.586 ; gain = 901.547 ; free physical = 22046 ; free virtual = 24881
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2653.129 ; gain = 914.547 ; free physical = 24116 ; free virtual = 25685
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2640.586 ; gain = 901.547 ; free physical = 22046 ; free virtual = 24881
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2653.129 ; gain = 914.547 ; free physical = 24116 ; free virtual = 25685
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.73 ; elapsed = 00:00:00.73 . Memory (MB): peak = 2640.586 ; gain = 0.000 ; free physical = 21788 ; free virtual = 24893
+Netlist sorting complete. Time (s): cpu = 00:00:00.66 ; elapsed = 00:00:00.67 . Memory (MB): peak = 2653.129 ; gain = 0.000 ; free physical = 24124 ; free virtual = 25686
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -17121,22 +17486,22 @@ Parsing XDC File [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/
 Finished Parsing XDC File [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/cva6_fpga.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2851.000 ; gain = 0.000 ; free physical = 21315 ; free virtual = 24767
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2864.543 ; gain = 0.000 ; free physical = 23991 ; free virtual = 25571
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2851.035 ; gain = 0.000 ; free physical = 21315 ; free virtual = 24767
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2864.578 ; gain = 0.000 ; free physical = 23991 ; free virtual = 25571
 WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'i_axi_dwidth_converter_dm_master' at clock pin 's_axi_aclk' is different from the actual clock period '25.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'i_axi_dwidth_converter_dm_slave' at clock pin 's_axi_aclk' is different from the actual clock period '25.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:21 . Memory (MB): peak = 2864.875 ; gain = 1125.836 ; free physical = 21410 ; free virtual = 24862
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 23920 ; free virtual = 25507
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:21 . Memory (MB): peak = 2864.875 ; gain = 1125.836 ; free physical = 21409 ; free virtual = 24861
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 23919 ; free virtual = 25507
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -17148,7 +17513,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for i_xlnx_clk_gen. (constraint file 
 Applied set_property KEEP_HIERARCHY = SOFT for i_axi_dwidth_converter_dm_master. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for i_axi_dwidth_converter_dm_slave. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:21 . Memory (MB): peak = 2864.875 ; gain = 1125.836 ; free physical = 21413 ; free virtual = 24866
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 23919 ; free virtual = 25506
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'r_state_q_reg' in module 'axi_atop_filter'
 INFO: [Synth 8-802] inferred FSM for state register 'w_state_q_reg' in module 'axi_atop_filter'
@@ -17478,7 +17843,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'w_state_q_reg' using encod
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'r_state_q_reg' using encoding 'sequential' in module 'axi_riscv_lrsc'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:36 ; elapsed = 00:00:35 . Memory (MB): peak = 2864.875 ; gain = 1125.836 ; free physical = 17495 ; free virtual = 20992
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:32 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 19944 ; free virtual = 21550
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -17490,12 +17855,12 @@ Detailed RTL Component Info :
 	   2 Input   64 Bit       Adders := 21    
 	   3 Input   64 Bit       Adders := 1     
 	   2 Input   33 Bit       Adders := 1     
-	   2 Input   32 Bit       Adders := 27    
-	   3 Input   32 Bit       Adders := 2     
+	   2 Input   32 Bit       Adders := 30    
+	   3 Input   32 Bit       Adders := 3     
 	   3 Input   30 Bit       Adders := 4     
 	   2 Input   30 Bit       Adders := 9     
-	   3 Input   16 Bit       Adders := 4     
-	   2 Input   16 Bit       Adders := 21    
+	   2 Input   16 Bit       Adders := 25    
+	   3 Input   16 Bit       Adders := 8     
 	   2 Input   12 Bit       Adders := 1     
 	   3 Input    9 Bit       Adders := 2     
 	   2 Input    9 Bit       Adders := 11    
@@ -17534,7 +17899,7 @@ Detailed RTL Component Info :
 	               39 Bit    Registers := 6     
 	               34 Bit    Registers := 20    
 	               33 Bit    Registers := 2     
-	               32 Bit    Registers := 265   
+	               32 Bit    Registers := 270   
 	               30 Bit    Registers := 11    
 	               26 Bit    Registers := 4     
 	               24 Bit    Registers := 1     
@@ -17548,11 +17913,11 @@ Detailed RTL Component Info :
 	                8 Bit    Registers := 186   
 	                7 Bit    Registers := 10    
 	                6 Bit    Registers := 32    
-	                5 Bit    Registers := 114   
+	                5 Bit    Registers := 115   
 	                4 Bit    Registers := 317   
 	                3 Bit    Registers := 192   
-	                2 Bit    Registers := 323   
-	                1 Bit    Registers := 819   
+	                2 Bit    Registers := 324   
+	                1 Bit    Registers := 822   
 +---Multipliers : 
 	              33x33  Multipliers := 1     
 +---RAMs : 
@@ -17595,14 +17960,16 @@ Detailed RTL Component Info :
 	   2 Input   41 Bit        Muxes := 4     
 	   2 Input   40 Bit        Muxes := 9     
 	   2 Input   39 Bit        Muxes := 3     
-	   2 Input   34 Bit        Muxes := 58    
+	   2 Input   34 Bit        Muxes := 70    
 	   4 Input   34 Bit        Muxes := 3     
 	   2 Input   33 Bit        Muxes := 1     
 	   3 Input   33 Bit        Muxes := 1     
-	   2 Input   32 Bit        Muxes := 586   
+	   2 Input   32 Bit        Muxes := 647   
 	   4 Input   32 Bit        Muxes := 26    
 	   3 Input   32 Bit        Muxes := 11    
 	   7 Input   32 Bit        Muxes := 6     
+	  15 Input   32 Bit        Muxes := 2     
+	  16 Input   32 Bit        Muxes := 3     
 	  11 Input   32 Bit        Muxes := 2     
 	   6 Input   32 Bit        Muxes := 3     
 	   5 Input   32 Bit        Muxes := 6     
@@ -17634,7 +18001,7 @@ Detailed RTL Component Info :
 	   2 Input   10 Bit        Muxes := 2     
 	   2 Input    9 Bit        Muxes := 9     
 	   4 Input    9 Bit        Muxes := 7     
-	   2 Input    8 Bit        Muxes := 153   
+	   2 Input    8 Bit        Muxes := 154   
 	   3 Input    8 Bit        Muxes := 4     
 	   4 Input    8 Bit        Muxes := 6     
 	   5 Input    8 Bit        Muxes := 2     
@@ -17646,39 +18013,42 @@ Detailed RTL Component Info :
 	  12 Input    6 Bit        Muxes := 1     
 	   8 Input    6 Bit        Muxes := 2     
 	   6 Input    6 Bit        Muxes := 1     
-	   2 Input    5 Bit        Muxes := 263   
+	   2 Input    5 Bit        Muxes := 286   
+	  16 Input    5 Bit        Muxes := 2     
 	   3 Input    5 Bit        Muxes := 7     
 	   8 Input    5 Bit        Muxes := 19    
 	   9 Input    5 Bit        Muxes := 18    
 	   5 Input    5 Bit        Muxes := 3     
 	   7 Input    5 Bit        Muxes := 1     
-	   4 Input    5 Bit        Muxes := 8     
+	   4 Input    5 Bit        Muxes := 9     
 	  88 Input    5 Bit        Muxes := 1     
 	  31 Input    5 Bit        Muxes := 2     
 	   6 Input    5 Bit        Muxes := 2     
-	   2 Input    4 Bit        Muxes := 492   
+	   2 Input    4 Bit        Muxes := 500   
 	   5 Input    4 Bit        Muxes := 10    
-	   4 Input    4 Bit        Muxes := 34    
+	   4 Input    4 Bit        Muxes := 35    
 	   3 Input    4 Bit        Muxes := 4     
 	   7 Input    4 Bit        Muxes := 2     
 	  11 Input    4 Bit        Muxes := 2     
 	   9 Input    4 Bit        Muxes := 21    
 	  32 Input    4 Bit        Muxes := 1     
 	  46 Input    4 Bit        Muxes := 3     
-	   2 Input    3 Bit        Muxes := 413   
+	   2 Input    3 Bit        Muxes := 416   
 	   5 Input    3 Bit        Muxes := 32    
 	   7 Input    3 Bit        Muxes := 5     
 	   4 Input    3 Bit        Muxes := 8     
-	   3 Input    3 Bit        Muxes := 3     
+	   3 Input    3 Bit        Muxes := 4     
 	   6 Input    3 Bit        Muxes := 6     
 	  15 Input    3 Bit        Muxes := 4     
 	  17 Input    3 Bit        Muxes := 1     
 	  19 Input    3 Bit        Muxes := 2     
 	   9 Input    3 Bit        Muxes := 2     
-	   2 Input    2 Bit        Muxes := 730   
+	   2 Input    2 Bit        Muxes := 732   
 	   3 Input    2 Bit        Muxes := 42    
 	   4 Input    2 Bit        Muxes := 23    
 	   7 Input    2 Bit        Muxes := 9     
+	  14 Input    2 Bit        Muxes := 1     
+	  16 Input    2 Bit        Muxes := 2     
 	  11 Input    2 Bit        Muxes := 1     
 	   5 Input    2 Bit        Muxes := 3     
 	  19 Input    2 Bit        Muxes := 3     
@@ -17687,19 +18057,21 @@ Detailed RTL Component Info :
 	  40 Input    2 Bit        Muxes := 3     
 	  41 Input    2 Bit        Muxes := 3     
 	  10 Input    1 Bit        Muxes := 17    
-	   2 Input    1 Bit        Muxes := 2645  
-	   6 Input    1 Bit        Muxes := 301   
+	   2 Input    1 Bit        Muxes := 2753  
+	   6 Input    1 Bit        Muxes := 300   
 	   3 Input    1 Bit        Muxes := 83    
 	   7 Input    1 Bit        Muxes := 48    
-	   4 Input    1 Bit        Muxes := 154   
+	  16 Input    1 Bit        Muxes := 5     
+	  15 Input    1 Bit        Muxes := 1     
+	  11 Input    1 Bit        Muxes := 34    
+	   4 Input    1 Bit        Muxes := 158   
 	   5 Input    1 Bit        Muxes := 52    
-	  11 Input    1 Bit        Muxes := 33    
 	  12 Input    1 Bit        Muxes := 52    
 	   9 Input    1 Bit        Muxes := 20    
-	   8 Input    1 Bit        Muxes := 4     
-	  14 Input    1 Bit        Muxes := 2     
-	  19 Input    1 Bit        Muxes := 6     
+	   8 Input    1 Bit        Muxes := 5     
 	  20 Input    1 Bit        Muxes := 1     
+	  19 Input    1 Bit        Muxes := 6     
+	  14 Input    1 Bit        Muxes := 2     
 	  76 Input    1 Bit        Muxes := 19    
 	  88 Input    1 Bit        Muxes := 1     
 	  13 Input    1 Bit        Muxes := 1     
@@ -17720,6 +18092,28 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
+DSP Report: Generating DSP i_copro_alu/result_n3, operation Mode is: A*B.
+DSP Report: operator i_copro_alu/result_n3 is absorbed into DSP i_copro_alu/result_n3.
+DSP Report: Generating DSP i_copro_alu/result_n3, operation Mode is: A*B.
+DSP Report: operator i_copro_alu/result_n3 is absorbed into DSP i_copro_alu/result_n3.
+DSP Report: Generating DSP i_copro_alu/result_n1, operation Mode is: PCIN+A:B+(C:0x4000).
+DSP Report: operator i_copro_alu/result_n1 is absorbed into DSP i_copro_alu/result_n1.
+DSP Report: Generating DSP i_copro_alu/result_n3, operation Mode is: A*B.
+DSP Report: operator i_copro_alu/result_n3 is absorbed into DSP i_copro_alu/result_n3.
+DSP Report: Generating DSP i_copro_alu/result_n1, operation Mode is: C+A*B.
+DSP Report: operator i_copro_alu/result_n1 is absorbed into DSP i_copro_alu/result_n1.
+DSP Report: operator i_copro_alu/result_n3 is absorbed into DSP i_copro_alu/result_n1.
+DSP Report: Generating DSP i_copro_alu/result_n4, operation Mode is: A*B.
+DSP Report: operator i_copro_alu/result_n4 is absorbed into DSP i_copro_alu/result_n4.
+DSP Report: Generating DSP i_copro_alu/result_n4, operation Mode is: A*B.
+DSP Report: operator i_copro_alu/result_n4 is absorbed into DSP i_copro_alu/result_n4.
+DSP Report: Generating DSP i_copro_alu/result_n2, operation Mode is: PCIN+A:B+(C:0x4000).
+DSP Report: operator i_copro_alu/result_n2 is absorbed into DSP i_copro_alu/result_n2.
+DSP Report: Generating DSP i_copro_alu/result_n4, operation Mode is: A*B.
+DSP Report: operator i_copro_alu/result_n4 is absorbed into DSP i_copro_alu/result_n4.
+DSP Report: Generating DSP i_copro_alu/result_n2, operation Mode is: C+A*B.
+DSP Report: operator i_copro_alu/result_n2 is absorbed into DSP i_copro_alu/result_n2.
+DSP Report: operator i_copro_alu/result_n4 is absorbed into DSP i_copro_alu/result_n2.
 INFO: [Synth 8-5544] ROM "i_atop_filter/" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "i_atop_filter/" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
@@ -17958,8 +18352,8 @@ WARNING: [Synth 8-3917] design cva6__GCB0 has port rvfi_probes_o[csr] driven by 
 WARNING: [Synth 8-3917] design cva6__GCB0 has port rvfi_probes_o[instr] driven by constant 0
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 WARNING: [Synth 8-6014] Unused sequential element btb_gen.i_btb/gen_fpga_btb.gen_btb_ram[0].i_btb_ram/Mem_DP_reg was removed. 
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_frontend/\icache_ex_valid_q_reg[1] )
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (csr_regfile_i/\dcsr_q_reg[stopcount] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (csr_regfile_i/\dcsr_q_reg[xdebugver][30] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (csr_regfile_i/\dcsr_q_reg[xdebugver][31] )
@@ -17967,6 +18361,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (csr_regfi
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (csr_regfile_i/\icache_q_reg[15] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (csr_regfile_i/\dcache_q_reg[15] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (csr_regfile_i/\mstatus_q_reg[xs][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\id_stage_i/issue_q_reg[0][sbe][ex][cause][29] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (csr_regfile_i/\mie_q_reg[0] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (csr_regfile_i/\mie_q_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (csr_regfile_i/\mie_q_reg[2] )
@@ -17984,7 +18379,6 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (csr_regfi
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (csr_regfile_i/\mie_q_reg[17] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (csr_regfile_i/\mie_q_reg[18] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (csr_regfile_i/\mie_q_reg[19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (csr_regfile_i/\mie_q_reg[20] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/multiplier.sv:115]
 DSP Report: Generating DSP i_multiplier/mult_result_d, operation Mode is: A*B.
@@ -18193,12 +18587,22 @@ INFO: [Synth 8-5544] ROM "axi_fsm.result" won't be mapped to Block RAM because a
 INFO: [Synth 8-5544] ROM "axi_fsm.result" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:17 ; elapsed = 00:01:28 . Memory (MB): peak = 2864.875 ; gain = 1125.836 ; free physical = 8356 ; free virtual = 12241
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:13 ; elapsed = 00:01:19 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 17773 ; free virtual = 19487
 ---------------------------------------------------------------------------------
  Sort Area is ex_stage i_multiplier/mult_result_d_0 : 0 0 : 2701 5011 : Used 1 time 0
  Sort Area is ex_stage i_multiplier/mult_result_d_0 : 0 1 : 2310 5011 : Used 1 time 0
  Sort Area is ex_stage i_multiplier/mult_result_d_3 : 0 0 : 2304 4387 : Used 1 time 0
  Sort Area is ex_stage i_multiplier/mult_result_d_3 : 0 1 : 2083 4387 : Used 1 time 0
+ Sort Area is cvxif_example_coprocessor i_copro_alu/result_n3_8 : 0 0 : 1937 2061 : Used 1 time 0
+ Sort Area is cvxif_example_coprocessor i_copro_alu/result_n3_8 : 0 1 : 124 2061 : Used 1 time 0
+ Sort Area is cvxif_example_coprocessor i_copro_alu/result_n4_2 : 0 0 : 1937 2061 : Used 1 time 0
+ Sort Area is cvxif_example_coprocessor i_copro_alu/result_n4_2 : 0 1 : 124 2061 : Used 1 time 0
+ Sort Area is cvxif_example_coprocessor i_copro_alu/result_n1_a : 0 0 : 2029 2029 : Used 1 time 0
+ Sort Area is cvxif_example_coprocessor i_copro_alu/result_n2_5 : 0 0 : 2029 2029 : Used 1 time 0
+ Sort Area is cvxif_example_coprocessor i_copro_alu/result_n3_7 : 0 0 : 1937 1937 : Used 1 time 0
+ Sort Area is cvxif_example_coprocessor i_copro_alu/result_n3_9 : 0 0 : 1937 1937 : Used 1 time 0
+ Sort Area is cvxif_example_coprocessor i_copro_alu/result_n4_0 : 0 0 : 1937 1937 : Used 1 time 0
+ Sort Area is cvxif_example_coprocessor i_copro_alu/result_n4_4 : 0 0 : 1937 1937 : Used 1 time 0
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
@@ -18250,14 +18654,24 @@ Distributed RAM: Preliminary Mapping Report (see note below)
 Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
 
 DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
-+------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|mult        | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mult        | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mult        | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mult        | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-+------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++--------------------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name               | DSP Mapping         | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|copro_alu                 | A*B                 | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|copro_alu                 | A*B                 | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|cvxif_example_coprocessor | PCIN+A:B+(C:0x4000) | 13     | 18     | 16     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|copro_alu                 | A*B                 | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|copro_alu                 | C+A*B               | 16     | 16     | 31     | -      | 31     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|copro_alu                 | A*B                 | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|copro_alu                 | A*B                 | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|cvxif_example_coprocessor | PCIN+A:B+(C:0x4000) | 13     | 18     | 16     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|copro_alu                 | A*B                 | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|copro_alu                 | C+A*B               | 16     | 16     | 31     | -      | 31     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mult                      | A*B                 | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mult                      | (PCIN>>17)+A*B      | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mult                      | A*B                 | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mult                      | (PCIN>>17)+A*B      | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++--------------------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
@@ -18267,7 +18681,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:22 ; elapsed = 00:01:33 . Memory (MB): peak = 2864.875 ; gain = 1125.836 ; free physical = 5920 ; free virtual = 9864
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:18 ; elapsed = 00:01:24 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 17707 ; free virtual = 19492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
@@ -18285,7 +18699,7 @@ WARNING: [Synth 8-3332] Sequential element (FSM_sequential_state_q_reg[2]) is un
 WARNING: [Synth 8-3332] Sequential element (FSM_sequential_state_q_reg[1]) is unused and will be removed from module hwpf_stride.
 WARNING: [Synth 8-3332] Sequential element (FSM_sequential_state_q_reg[0]) is unused and will be removed from module hwpf_stride.
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:47 ; elapsed = 00:01:59 . Memory (MB): peak = 2864.875 ; gain = 1125.836 ; free physical = 4590 ; free virtual = 7769
+Finished Timing Optimization : Time (s): cpu = 00:01:45 ; elapsed = 00:01:51 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 17701 ; free virtual = 19487
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -18295,18 +18709,18 @@ Block RAM: Final Mapping Report
 +------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 |Module Name                                                                                                                         | RTL Object                                                     | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
 +------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|\gen_cache_hpd.i_cache_subsystemi_5 /i_cva6_icache/\gen_sram[0].tag_sram                                                            | data_sram/gen_cut[0].i_tc_sram_wrapper/i_ram/Mem_DP_reg        | 256 x 64(READ_FIRST)   | W |   | 256 x 64(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
-|\gen_cache_hpd.i_cache_subsystemi_5 /i_cva6_icache/\gen_sram[0].data_sram                                                           | data_sram/gen_cut[0].i_tc_sram_wrapper/i_ram/Mem_DP_reg        | 256 x 64(READ_FIRST)   | W |   | 256 x 64(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
-|\gen_cache_hpd.i_cache_subsystemi_5 /i_cva6_icache/\gen_sram[0].data_sram                                                           | data_sram/gen_cut[1].i_tc_sram_wrapper/i_ram/Mem_DP_reg        | 256 x 64(READ_FIRST)   | W |   | 256 x 64(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
-|\gen_cache_hpd.i_cache_subsystemi_5 /i_cva6_icache/\gen_sram[1].tag_sram                                                            | data_sram/gen_cut[0].i_tc_sram_wrapper/i_ram/Mem_DP_reg        | 256 x 64(READ_FIRST)   | W |   | 256 x 64(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
-|\gen_cache_hpd.i_cache_subsystemi_5 /i_cva6_icache/\gen_sram[1].data_sram                                                           | data_sram/gen_cut[0].i_tc_sram_wrapper/i_ram/Mem_DP_reg        | 256 x 64(READ_FIRST)   | W |   | 256 x 64(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
-|\gen_cache_hpd.i_cache_subsystemi_5 /i_cva6_icache/\gen_sram[1].data_sram                                                           | data_sram/gen_cut[1].i_tc_sram_wrapper/i_ram/Mem_DP_reg        | 256 x 64(READ_FIRST)   | W |   | 256 x 64(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
 |i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i                                                                                       | gen_dir_sram[0].dir_sram/ram_i/mem_reg                         | 256 x 26(READ_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
 |i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i                                                                                       | gen_dir_sram[1].dir_sram/ram_i/mem_reg                         | 256 x 26(READ_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
 |i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i                                                                                       | gen_dir_sram[2].dir_sram/ram_i/mem_reg                         | 256 x 26(READ_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
 |i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i                                                                                       | gen_dir_sram[3].dir_sram/ram_i/mem_reg                         | 256 x 26(READ_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
 |i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/\gen_data_sram_row[0].gen_data_sram_col[0].gen_data_sram_wbyteenable.data_sram/ram_i  | mem_reg                                                        | 512 x 128(READ_FIRST)  | W |   | 512 x 128(WRITE_FIRST) |   | R | Port A and B     | 0      | 2      | 
 |i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/\gen_data_sram_row[0].gen_data_sram_col[1].gen_data_sram_wbyteenable.data_sram/ram_i  | mem_reg                                                        | 512 x 128(READ_FIRST)  | W |   | 512 x 128(WRITE_FIRST) |   | R | Port A and B     | 0      | 2      | 
+|\gen_cache_hpd.i_cache_subsystemi_5 /i_cva6_icache/\gen_sram[0].tag_sram                                                            | data_sram/gen_cut[0].i_tc_sram_wrapper/i_ram/Mem_DP_reg        | 256 x 64(READ_FIRST)   | W |   | 256 x 64(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|\gen_cache_hpd.i_cache_subsystemi_5 /i_cva6_icache/\gen_sram[0].data_sram                                                           | data_sram/gen_cut[0].i_tc_sram_wrapper/i_ram/Mem_DP_reg        | 256 x 64(READ_FIRST)   | W |   | 256 x 64(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|\gen_cache_hpd.i_cache_subsystemi_5 /i_cva6_icache/\gen_sram[0].data_sram                                                           | data_sram/gen_cut[1].i_tc_sram_wrapper/i_ram/Mem_DP_reg        | 256 x 64(READ_FIRST)   | W |   | 256 x 64(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|\gen_cache_hpd.i_cache_subsystemi_5 /i_cva6_icache/\gen_sram[1].tag_sram                                                            | data_sram/gen_cut[0].i_tc_sram_wrapper/i_ram/Mem_DP_reg        | 256 x 64(READ_FIRST)   | W |   | 256 x 64(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|\gen_cache_hpd.i_cache_subsystemi_5 /i_cva6_icache/\gen_sram[1].data_sram                                                           | data_sram/gen_cut[0].i_tc_sram_wrapper/i_ram/Mem_DP_reg        | 256 x 64(READ_FIRST)   | W |   | 256 x 64(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|\gen_cache_hpd.i_cache_subsystemi_5 /i_cva6_icache/\gen_sram[1].data_sram                                                           | data_sram/gen_cut[1].i_tc_sram_wrapper/i_ram/Mem_DP_reg        | 256 x 64(READ_FIRST)   | W |   | 256 x 64(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
 |i_frontend                                                                                                                          | btb_gen.i_btb/gen_fpga_btb.gen_btb_ram[0].i_btb_ram/Mem_DP_reg | 32 x 33(READ_FIRST)    | W |   | 32 x 33(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
 +------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
@@ -18353,6 +18767,13 @@ INFO: [Synth 8-5816] Retiming module `addr_decode__1`
 INFO: [Synth 8-5816] Retiming module `addr_decode__1' done
 
 
+INFO: [Synth 8-5816] Retiming module `cvxif_example_coprocessor`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cvxif_example_coprocessor' done
+
+
 INFO: [Synth 8-5816] Retiming module `cva6_hpdcache_wrapper__GB1`
 	Numbers of forward move = 0, and backward move = 0
 
@@ -18388,12 +18809,12 @@ INFO: [Synth 8-5816] Retiming module `cva6_zybo_z7_20`
 INFO: [Synth 8-5816] Retiming module `cva6_zybo_z7_20' done
 
 
-INFO: [Synth 8-7052] The timing for the instance i_cva6i_5/i_cva6_icache/gen_sram[0].tag_sram/data_sram/gen_cut[0].i_tc_sram_wrapper/i_ram/Mem_DP_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance i_cva6i_5/i_cva6_icache/gen_sram[0].data_sram/data_sram/gen_cut[0].i_tc_sram_wrapper/i_ram/Mem_DP_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance i_cva6i_5/i_cva6_icache/gen_sram[0].data_sram/data_sram/gen_cut[1].i_tc_sram_wrapper/i_ram/Mem_DP_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance i_cva6i_5/i_cva6_icache/gen_sram[1].tag_sram/data_sram/gen_cut[0].i_tc_sram_wrapper/i_ram/Mem_DP_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance i_cva6i_5/i_cva6_icache/gen_sram[1].data_sram/data_sram/gen_cut[0].i_tc_sram_wrapper/i_ram/Mem_DP_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance i_cva6i_5/i_cva6_icache/gen_sram[1].data_sram/data_sram/gen_cut[1].i_tc_sram_wrapper/i_ram/Mem_DP_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance gen_cache_hpd.i_cache_subsystemi_5/i_cva6_icache/gen_sram[0].tag_sram/data_sram/gen_cut[0].i_tc_sram_wrapper/i_ram/Mem_DP_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance gen_cache_hpd.i_cache_subsystemi_5/i_cva6_icache/gen_sram[0].data_sram/data_sram/gen_cut[0].i_tc_sram_wrapper/i_ram/Mem_DP_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance gen_cache_hpd.i_cache_subsystemi_5/i_cva6_icache/gen_sram[0].data_sram/data_sram/gen_cut[1].i_tc_sram_wrapper/i_ram/Mem_DP_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance gen_cache_hpd.i_cache_subsystemi_5/i_cva6_icache/gen_sram[1].tag_sram/data_sram/gen_cut[0].i_tc_sram_wrapper/i_ram/Mem_DP_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance gen_cache_hpd.i_cache_subsystemi_5/i_cva6_icache/gen_sram[1].data_sram/data_sram/gen_cut[0].i_tc_sram_wrapper/i_ram/Mem_DP_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance gen_cache_hpd.i_cache_subsystemi_5/i_cva6_icache/gen_sram[1].data_sram/data_sram/gen_cut[1].i_tc_sram_wrapper/i_ram/Mem_DP_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-5816] Retiming module `axi_xbar__GC0_tempName`
 	Numbers of forward move = 0, and backward move = 0
 
@@ -18408,6 +18829,50 @@ INFO: [Synth 8-5816] Retiming module `cva6_zybo_z7_20`
 INFO: [Synth 8-5816] Retiming module `cva6_zybo_z7_20' done
 
 
+INFO: [Synth 8-5816] Retiming module `cva6_hpdcache_wrapper__GB0_tempName`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cva6_hpdcache_wrapper__GB0_tempName' done
+
+
+INFO: [Synth 8-5816] Retiming module `cva6_zybo_z7_20`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cva6_zybo_z7_20' done
+
+
+INFO: [Synth 8-7067] Removed DRAM instance i_dcachei_3/i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/gen_wbuf.hpdcache_wbuf_i/send_meta_fifo_i/gen_fifo.fifo_mem_q_reg[0][meta_tag]_0_1_30_31 from module cva6_hpdcache_wrapper__GB0_tempName due to constant propagation
+INFO: [Synth 8-7067] Removed DRAM instance i_dcachei_3/i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_miss_handler_i/i_r_metadata_fifo/gen_fifo.fifo_mem_q_reg[0][r_error]_0_3_1_1 from module cva6_hpdcache_wrapper__GB0_tempName due to constant propagation
+INFO: [Synth 8-7067] Removed DRAM instance i_dcachei_3/i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/gen_wbuf.hpdcache_wbuf_i/send_meta_fifo_i/gen_fifo.fifo_mem_q_reg[0][meta_tag]_0_1_30_31 from module cva6_hpdcache_wrapper__GB0_tempName due to constant propagation
+INFO: [Synth 8-7052] The timing for the instance i_dcachei_3/i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_dir_sram[0].dir_sram/ram_i/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_dcachei_3/i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_dir_sram[0].dir_sram/ram_i/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_dcachei_3/i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_dir_sram[1].dir_sram/ram_i/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_dcachei_3/i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_dir_sram[1].dir_sram/ram_i/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_dcachei_3/i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_dir_sram[2].dir_sram/ram_i/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_dcachei_3/i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_dir_sram[2].dir_sram/ram_i/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_dcachei_3/i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_dir_sram[3].dir_sram/ram_i/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_dcachei_3/i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_dir_sram[3].dir_sram/ram_i/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_dcachei_3/i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_data_sram_row[0].gen_data_sram_col[0].gen_data_sram_wbyteenable.data_sram/ram_i/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_dcachei_3/i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_data_sram_row[0].gen_data_sram_col[0].gen_data_sram_wbyteenable.data_sram/ram_i/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_dcachei_3/i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_data_sram_row[0].gen_data_sram_col[1].gen_data_sram_wbyteenable.data_sram/ram_i/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_dcachei_3/i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_data_sram_row[0].gen_data_sram_col[1].gen_data_sram_wbyteenable.data_sram/ram_i/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-5816] Retiming module `cva6__GCB0_tempName`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cva6__GCB0_tempName' done
+
+
+INFO: [Synth 8-5816] Retiming module `cva6_zybo_z7_20`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cva6_zybo_z7_20' done
+
+
+INFO: [Synth 8-7052] The timing for the instance i_cva6i_6/i_ariane/i_cva6/i_frontend/btb_gen.i_btb/gen_fpga_btb.gen_btb_ram[0].i_btb_ram/Mem_DP_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/multiplier.sv:156]
 INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/core/multiplier.sv:156]
 INFO: [Synth 8-5816] Retiming module `ex_stage_tempName`
@@ -19353,7 +19818,6 @@ INFO: [Synth 8-5816] Retiming module `cva6_zybo_z7_20`
 INFO: [Synth 8-5816] Retiming module `cva6_zybo_z7_20' done
 
 
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 Combination loop (list two pins only) .:cva6_zybo_z7_20/i_1:cva6_zybo_z7_20__GCB2_tempName/i_xlnx_clk_gen/clk_out1  .:cva6_zybo_z7_20/i_1:cva6_zybo_z7_20__GCB2_tempName/i_rstgen_main/i_rstgen_bypass/synch_regs_q_reg[3]/C
 The design has combinational loop or hierarchical design, no retiming 
 INFO: [Synth 8-5816] Retiming module `cva6_zybo_z7_20__GCB2_tempName`
@@ -19372,38 +19836,8 @@ INFO: [Synth 8-5816] Retiming module `cva6_zybo_z7_20' done
 
 INFO: [Synth 8-7052] The timing for the instance i_1/i_bootrom/addr_q_reg_rep_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance i_1/i_bootrom/addr_q_reg_rep_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-5816] Retiming module `cva6_zybo_z7_20_GT0_tempName`
-	Numbers of forward move = 0, and backward move = 0
-
-
-INFO: [Synth 8-5816] Retiming module `cva6_zybo_z7_20_GT0_tempName' done
-
-
-INFO: [Synth 8-5816] Retiming module `cva6_zybo_z7_20`
-	Numbers of forward move = 0, and backward move = 0
-
-
-INFO: [Synth 8-5816] Retiming module `cva6_zybo_z7_20' done
-
-
-INFO: [Synth 8-7067] Removed DRAM instance i_cva6i_3/i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/gen_wbuf.hpdcache_wbuf_i/send_meta_fifo_i/gen_fifo.fifo_mem_q_reg[0][meta_tag]_0_1_30_31 from module cva6_zybo_z7_20_GT0_tempName due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance i_cva6i_3/i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_miss_handler_i/i_r_metadata_fifo/gen_fifo.fifo_mem_q_reg[0][r_error]_0_3_1_1 from module cva6_zybo_z7_20_GT0_tempName due to constant propagation
-INFO: [Synth 8-7067] Removed DRAM instance i_cva6i_3/i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/gen_wbuf.hpdcache_wbuf_i/send_meta_fifo_i/gen_fifo.fifo_mem_q_reg[0][meta_tag]_0_1_30_31 from module cva6_zybo_z7_20_GT0_tempName due to constant propagation
-INFO: [Synth 8-7052] The timing for the instance i_cva6i_3/i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_dir_sram[0].dir_sram/ram_i/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance i_cva6i_3/i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_dir_sram[0].dir_sram/ram_i/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance i_cva6i_3/i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_dir_sram[1].dir_sram/ram_i/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance i_cva6i_3/i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_dir_sram[1].dir_sram/ram_i/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance i_cva6i_3/i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_dir_sram[2].dir_sram/ram_i/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance i_cva6i_3/i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_dir_sram[2].dir_sram/ram_i/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance i_cva6i_3/i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_dir_sram[3].dir_sram/ram_i/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance i_cva6i_3/i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_dir_sram[3].dir_sram/ram_i/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance i_cva6i_3/i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_data_sram_row[0].gen_data_sram_col[0].gen_data_sram_wbyteenable.data_sram/ram_i/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance i_cva6i_3/i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_data_sram_row[0].gen_data_sram_col[0].gen_data_sram_wbyteenable.data_sram/ram_i/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance i_cva6i_3/i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_data_sram_row[0].gen_data_sram_col[1].gen_data_sram_wbyteenable.data_sram/ram_i/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance i_cva6i_3/i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_data_sram_row[0].gen_data_sram_col[1].gen_data_sram_wbyteenable.data_sram/ram_i/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance i_cva6i_3/i_ariane/i_cva6/i_frontend/btb_gen.i_btb/gen_fpga_btb.gen_btb_ram[0].i_btb_ram/Mem_DP_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:57 ; elapsed = 00:02:15 . Memory (MB): peak = 2864.875 ; gain = 1125.836 ; free physical = 5181 ; free virtual = 6257
+Finished Technology Mapping : Time (s): cpu = 00:01:53 ; elapsed = 00:02:05 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 16816 ; free virtual = 18610
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -19417,12 +19851,6 @@ Finished Flattening Before IO Insertion
 ---------------------------------------------------------------------------------
 Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-7052] The timing for the instance i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_cva6_icache/gen_sram[0].tag_sram/data_sram/gen_cut[0].i_tc_sram_wrapper/i_ram/Mem_DP_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_cva6_icache/gen_sram[0].data_sram/data_sram/gen_cut[0].i_tc_sram_wrapper/i_ram/Mem_DP_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_cva6_icache/gen_sram[0].data_sram/data_sram/gen_cut[1].i_tc_sram_wrapper/i_ram/Mem_DP_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_cva6_icache/gen_sram[1].tag_sram/data_sram/gen_cut[0].i_tc_sram_wrapper/i_ram/Mem_DP_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_cva6_icache/gen_sram[1].data_sram/data_sram/gen_cut[0].i_tc_sram_wrapper/i_ram/Mem_DP_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_cva6_icache/gen_sram[1].data_sram/data_sram/gen_cut[1].i_tc_sram_wrapper/i_ram/Mem_DP_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_dir_sram[0].dir_sram/ram_i/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_dir_sram[0].dir_sram/ram_i/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_dir_sram[1].dir_sram/ram_i/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
@@ -19435,6 +19863,12 @@ INFO: [Synth 8-7052] The timing for the instance i_ariane/i_cva6/gen_cache_hpd.i
 INFO: [Synth 8-7052] The timing for the instance i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_data_sram_row[0].gen_data_sram_col[0].gen_data_sram_wbyteenable.data_sram/ram_i/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_data_sram_row[0].gen_data_sram_col[1].gen_data_sram_wbyteenable.data_sram/ram_i/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_dcache/i_hpdcache/hpdcache_ctrl_i/hpdcache_memctrl_i/gen_data_sram_row[0].gen_data_sram_col[1].gen_data_sram_wbyteenable.data_sram/ram_i/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_cva6_icache/gen_sram[0].tag_sram/data_sram/gen_cut[0].i_tc_sram_wrapper/i_ram/Mem_DP_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_cva6_icache/gen_sram[0].data_sram/data_sram/gen_cut[0].i_tc_sram_wrapper/i_ram/Mem_DP_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_cva6_icache/gen_sram[0].data_sram/data_sram/gen_cut[1].i_tc_sram_wrapper/i_ram/Mem_DP_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_cva6_icache/gen_sram[1].tag_sram/data_sram/gen_cut[0].i_tc_sram_wrapper/i_ram/Mem_DP_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_cva6_icache/gen_sram[1].data_sram/data_sram/gen_cut[0].i_tc_sram_wrapper/i_ram/Mem_DP_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_ariane/i_cva6/gen_cache_hpd.i_cache_subsystem/i_cva6_icache/gen_sram[1].data_sram/data_sram/gen_cut[1].i_tc_sram_wrapper/i_ram/Mem_DP_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance i_ariane/i_cva6/i_frontend/btb_gen.i_btb/gen_fpga_btb.gen_btb_ram[0].i_btb_ram/Mem_DP_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance i_bootrom/addr_q_reg_rep_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance i_bootrom/addr_q_reg_rep_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
@@ -19445,37 +19879,37 @@ INFO: [Synth 8-4649] Removing BlackBox instance \i_ariane/i_cva6/i_frontend/i_in
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:01 ; elapsed = 00:02:19 . Memory (MB): peak = 2864.875 ; gain = 1125.836 ; free physical = 3288 ; free virtual = 4108
+Finished IO Insertion : Time (s): cpu = 00:01:58 ; elapsed = 00:02:09 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 16732 ; free virtual = 18601
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:01 ; elapsed = 00:02:19 . Memory (MB): peak = 2864.875 ; gain = 1125.836 ; free physical = 3288 ; free virtual = 4108
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:58 ; elapsed = 00:02:09 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 16732 ; free virtual = 18601
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:04 ; elapsed = 00:02:22 . Memory (MB): peak = 2864.875 ; gain = 1125.836 ; free physical = 4781 ; free virtual = 5408
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:00 ; elapsed = 00:02:12 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 16734 ; free virtual = 18595
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:04 ; elapsed = 00:02:22 . Memory (MB): peak = 2864.875 ; gain = 1125.836 ; free physical = 4014 ; free virtual = 4644
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:01 ; elapsed = 00:02:12 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 16734 ; free virtual = 18596
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:04 ; elapsed = 00:02:22 . Memory (MB): peak = 2864.875 ; gain = 1125.836 ; free physical = 5322 ; free virtual = 5987
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:01 ; elapsed = 00:02:12 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 16734 ; free virtual = 18596
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:04 ; elapsed = 00:02:23 . Memory (MB): peak = 2864.875 ; gain = 1125.836 ; free physical = 5322 ; free virtual = 5980
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:01 ; elapsed = 00:02:12 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 16734 ; free virtual = 18596
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -19499,14 +19933,24 @@ Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 DSP Final Report (the ' indicates corresponding REG is set)
-+------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|mult        | A*B             | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mult        | (PCIN>>17+A*B)' | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
-|mult        | A*B             | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mult        | (PCIN>>17+A*B)' | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
-+------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++--------------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name               | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|copro_alu                 | A*B             | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|copro_alu                 | A*B             | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|cvxif_example_coprocessor | PCIN+A:B+C      | 30     | 18     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|copro_alu                 | A*B             | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|copro_alu                 | C+A*B           | 30     | 18     | 48     | -      | 31     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|copro_alu                 | A*B             | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|copro_alu                 | A*B             | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|cvxif_example_coprocessor | PCIN+A:B+C      | 30     | 18     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|copro_alu                 | A*B             | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|copro_alu                 | C+A*B           | 30     | 18     | 48     | -      | 31     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mult                      | A*B             | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mult                      | (PCIN>>17+A*B)' | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|mult                      | A*B             | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mult                      | (PCIN>>17+A*B)' | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++--------------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 
 Report BlackBoxes: 
@@ -19528,42 +19972,42 @@ Report Cell Usage:
 |3     |xlnx_blk_mem_gen                    |     1|
 |4     |xlnx_clk_gen                        |     1|
 |5     |BUFG                                |     1|
-|6     |CARRY4                              |  1250|
-|7     |DSP48E1                             |     4|
-|9     |LUT1                                |   199|
-|10    |LUT2                                |  3004|
-|11    |LUT3                                |  3865|
-|12    |LUT4                                |  3559|
-|13    |LUT5                                |  4487|
-|14    |LUT6                                |  8777|
-|15    |MUXF7                               |   409|
-|16    |MUXF8                               |     9|
-|17    |RAM16X1D                            |     4|
-|18    |RAM32M                              |    32|
-|19    |RAM32X1D                            |     6|
-|20    |RAM64M                              |     4|
-|21    |RAMB18E1                            |     5|
-|23    |RAMB36E1                            |    12|
-|26    |FDCE                                | 13113|
-|27    |FDPE                                |    61|
-|28    |FDRE                                |  1211|
-|29    |FDSE                                |     1|
-|30    |IBUF                                |     6|
-|31    |OBUF                                |     2|
+|6     |CARRY4                              |  1332|
+|7     |DSP48E1                             |    14|
+|11    |LUT1                                |   264|
+|12    |LUT2                                |  3340|
+|13    |LUT3                                |  3858|
+|14    |LUT4                                |  3507|
+|15    |LUT5                                |  4751|
+|16    |LUT6                                |  9110|
+|17    |MUXF7                               |   384|
+|18    |MUXF8                               |    18|
+|19    |RAM16X1D                            |     4|
+|20    |RAM32M                              |    32|
+|21    |RAM32X1D                            |     6|
+|22    |RAM64M                              |     4|
+|23    |RAMB18E1                            |     5|
+|25    |RAMB36E1                            |    12|
+|28    |FDCE                                | 13255|
+|29    |FDPE                                |    61|
+|30    |FDRE                                |  1211|
+|31    |FDSE                                |     1|
+|32    |IBUF                                |     6|
+|33    |OBUF                                |     2|
 +------+------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:05 ; elapsed = 00:02:23 . Memory (MB): peak = 2864.875 ; gain = 1125.836 ; free physical = 5317 ; free virtual = 5982
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:01 ; elapsed = 00:02:13 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 16734 ; free virtual = 18596
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 705 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:57 ; elapsed = 00:02:19 . Memory (MB): peak = 2864.875 ; gain = 901.547 ; free physical = 9779 ; free virtual = 10719
-Synthesis Optimization Complete : Time (s): cpu = 00:02:06 ; elapsed = 00:02:27 . Memory (MB): peak = 2864.875 ; gain = 1125.836 ; free physical = 9772 ; free virtual = 10716
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:55 ; elapsed = 00:02:07 . Memory (MB): peak = 2876.418 ; gain = 914.547 ; free physical = 23926 ; free virtual = 25796
+Synthesis Optimization Complete : Time (s): cpu = 00:02:03 ; elapsed = 00:02:13 . Memory (MB): peak = 2876.418 ; gain = 1137.836 ; free physical = 23941 ; free virtual = 25795
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.34 ; elapsed = 00:00:00.34 . Memory (MB): peak = 2864.875 ; gain = 0.000 ; free physical = 6199 ; free virtual = 7204
-INFO: [Netlist 29-17] Analyzing 1735 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.32 ; elapsed = 00:00:00.32 . Memory (MB): peak = 2876.418 ; gain = 0.000 ; free physical = 23948 ; free virtual = 25802
+INFO: [Netlist 29-17] Analyzing 1811 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2888.887 ; gain = 0.000 ; free physical = 11635 ; free virtual = 12683
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2900.430 ; gain = 0.000 ; free physical = 23953 ; free virtual = 25807
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 46 instances were transformed.
   RAM16X1D => RAM32X1D (RAMD32(x2)): 4 instances
@@ -19571,16 +20015,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32X1D => RAM32X1D (RAMD32(x2)): 6 instances
   RAM64M => RAM64M (RAMD64E(x4)): 4 instances
 
-Synth Design complete | Checksum: 57c19157
+Synth Design complete | Checksum: 40887ef6
 INFO: [Common 17-83] Releasing license: Synthesis
-806 Infos, 502 Warnings, 2 Critical Warnings and 0 Errors encountered.
+811 Infos, 503 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:13 ; elapsed = 00:03:14 . Memory (MB): peak = 2888.922 ; gain = 1501.473 ; free physical = 11633 ; free virtual = 12687
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 9330.408; main = 2111.401; forked = 7400.904
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 14418.766; main = 2888.891; forked = 11577.898
+synth_design: Time (s): cpu = 00:02:09 ; elapsed = 00:03:00 . Memory (MB): peak = 2900.465 ; gain = 1514.473 ; free physical = 23952 ; free virtual = 25806
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 9484.075; main = 2303.035; forked = 7488.255
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 14409.703; main = 2900.434; forked = 11557.293
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2912.898 ; gain = 0.000 ; free physical = 11640 ; free virtual = 12699
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2924.441 ; gain = 0.000 ; free physical = 23949 ; free virtual = 25806
 INFO: [Common 17-1381] The checkpoint '/home/pr_se_2324/LumiEirb_new/cva6-softcore-contest/corev_apu/fpga/cva6_fpga.runs/synth_1/cva6_zybo_z7_20.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2912.898 ; gain = 23.977 ; free physical = 12819 ; free virtual = 14144
+write_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2924.441 ; gain = 23.977 ; free physical = 23794 ; free virtual = 25691
 INFO: [runtcl-4] Executing : report_utilization -file cva6_zybo_z7_20_utilization_synth.rpt -pb cva6_zybo_z7_20_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Apr 20 20:10:37 2026...
+INFO: [Common 17-206] Exiting Vivado at Fri May  1 13:50:45 2026...
