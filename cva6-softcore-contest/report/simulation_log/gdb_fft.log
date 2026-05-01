@@ -1,0 +1,16 @@
+Remote debugging using :3333
+0x800006bc in _exit ()
+Loading section .vectors, size 0x80 lma 0x80000000
+Loading section .init, size 0x5c lma 0x80000080
+Loading section .text, size 0x10044 lma 0x800000e0
+Loading section .rodata, size 0x235c lma 0x80010128
+Loading section .eh_frame, size 0x3c lma 0x80012484
+Loading section .data, size 0x6cc lma 0x800124c0
+Loading section .got, size 0x18 lma 0x80012b8c
+Loading section .sdata, size 0x60 lma 0x80012ba8
+Start address 0x80000080, load size 76796
+Transfer rate: 55 KB/sec, 6399 bytes/write.
+Continuing.
+
+Program received signal SIGINT, Interrupt.
+0x800006bc in _exit ()
