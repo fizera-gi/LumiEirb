@@ -1,4 +1,4 @@
-# LumiEirb
+# LumiEirb - Enseirb Matmeca 
 
 # LumiEirb – RISC-V Contest 2025–2026
 
